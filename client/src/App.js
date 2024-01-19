@@ -4,7 +4,7 @@ import Heading from "./components/Heading/Heading";
 
 function App() {
   return (
-    <div className="bg-black">
+    <div className="h-screen bg-black">
       <Navbar />
       <Heading />
     </div>
