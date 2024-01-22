@@ -1,35 +1,63 @@
-import React, { useState } from 'react'
-import logo from "../../assets/logo.svg"
-import './navbar.css'
+import React, { useState } from "react";
+import logo from "../../assets/logo.svg";
+import "./navbar.css";
 
 const Navbar = () => {
+  const [bg, setBg] = useState([false, false, false, false]);
 
-  const [bg,setBg]=useState([false,false,false,false])
+  const hoverHandler = (e) => {
+    const temp = [false, false, false, false];
+    temp[e] = true;
+    setBg(temp);
+  };
 
+  const hoverOut = () => {
+    setBg([false, false, false, false]);
+  };
 
   return (
     <div>
-      <div className='flex items-center justify-normal'>
+      <div className="flex items-center justify-between px-16 py-8 ">
         <div>
-            <img src={logo} alt="" width="100%" height="100%"/>
+          <img src={logo} alt="" width="100%" height="100%" />
         </div>
-        <div className='flex gap-x-6'>
-          <div className={`text-center w-[100.5px] h-[30px] m-5 ${bg[0]?"back":""}`}>
-            <h5  className='text-[#FFFFFF] heading cursor-pointer' >Home</h5>
-          </div>
-          <div className={`text-center w-[100.5px] h-[30px] m-5 ${bg[1]?"back":""}`}>
-            <h5  className='text-[#FFFFFF] heading cursor-pointer' >About Us</h5>
-          </div>
-          <div className={`text-center w-[100.5px] h-[30px] m-5 ${bg[2]?"back":""}`}>
-            <h5  className='text-[#FFFFFF] heading cursor-pointer' >Timeline</h5>
-          </div>
-          <div className={`text-center w-[100.5px] h-[30px] m-5 ${bg[3]?"back":""}`}>
-            <h5 className='text-[#FFFFFF] heading cursor-pointer' >Problem Statements</h5>
-          </div>
-        </div>
+        <ul className="flex gap-x-6 ">
+          <li
+            className={`text-center w-20 h-[30px] ${bg[0] ? "back" : ""}`}
+            // onMouseEnter={() => hoverHandler(0)}
+            // onMouseLeave={hoverOut}
+          >
+            <h5 className="text-[#FFFFFF] heading cursor-pointer w-full">
+              Home
+            </h5>
+          </li>
+          <li
+            className={`text-center px-6 h-[30px]  ${bg[1] ? "back" : ""}`}
+            // onMouseEnter={() => hoverHandler(1)}
+            // onMouseLeave={hoverOut}
+          >
+            <h5 className="text-[#FFFFFF] heading cursor-pointer">About Us</h5>
+          </li>
+          <li
+            className={`text-center px-6  h-[30px]  ${bg[2] ? "back" : ""}`}
+            // onMouseEnter={() => hoverHandler(2)}
+            // onMouseLeave={hoverOut}
+          >
+            <h5 className="text-[#FFFFFF] heading cursor-pointer">Timeline</h5>
+          </li>
+          <li
+            className={`text-center px-6 h-[30px] ${bg[3] ? "back" : ""}`}
+            // onMouseEnter={() => hoverHandler(3)}
+            // onMouseLeave={hoverOut}
+          >
+            <h5 className="text-[#FFFFFF] heading cursor-pointer">
+              Problem Statements
+            </h5>
+          </li>
+        </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

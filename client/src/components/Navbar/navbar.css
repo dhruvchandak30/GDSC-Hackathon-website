@@ -1,11 +1,14 @@
   .back{
     background-image: url(../../assets/bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-posion:; */
   }
 
   .heading{
     color: #FFF;
 text-align: center;
-font-family: Poppins;
+font-family: Poppins , sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
