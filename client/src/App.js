@@ -1,15 +1,17 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Heading from "./components/Heading/Heading";
-import Home from "./components/pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+
 
 function App() {
   return (
-    <div className="h-screen bg-black">
-      {/* <Navbar /> */}
-      <Home/>
-      <Heading />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
