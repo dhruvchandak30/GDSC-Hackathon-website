@@ -9,9 +9,11 @@ import SocialIcon from "./SocialIcon";
 
 const GameCodex = () => {
   return (
-    <div className="flex  items-center flex-col my-8">
-      <div className="flex mt-2 mr-[35rem] absolute">
-        <img src={GameCodexImg} alt="GameCodex 1.0"></img>
+    <div className="flex  items-center  flex-col my-8">
+      <div className="flex  mr-[35rem] absolute">
+        <h1 className="text-white font-array font-array  text-5xl">
+          GameCodex 1.0
+        </h1>
       </div>
       <div>
         <svg
