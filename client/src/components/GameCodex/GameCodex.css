@@ -16,5 +16,13 @@ svg {
   z-index: 200;
 }
 .verse > tspan:nth-child(2n) {
-    fill:white
+  fill: white;
+}
+.SocialIcons {
+  border: 2px solid white;
+  --tw-skew-x: -22deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  margin: 2px;
 }
