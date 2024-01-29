@@ -22,6 +22,10 @@ body::-webkit-scrollbar-thumb {
   src: local("Array-Regular"), url("./fonts/Array-Regular.woff") format("woff");
 }
 @font-face {
+  font-family: "instagram";
+  src: local("instagram"), url("./fonts/instagram.woff") format("woff");
+}
+@font-face {
   font-family: "pricedown";
   src: local("Pricedown-Regular"),
     url("./fonts/pricedown_bl.ttf") format("truetype");
@@ -33,4 +37,7 @@ body::-webkit-scrollbar-thumb {
 
 .font-array {
   font-family: "array";
+}
+.font-instagram {
+  font-family: "instagram";
 }
