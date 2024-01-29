@@ -1,10 +1,11 @@
 import React from "react";
 import "./GameCodex.css";
 import GameCodexImg from "../../assets/GameCodex.png";
-import Twitter from "../../assets/Twitter.png";
-import Insta from "../../assets/Insta.png";
-import Git from "../../assets/Git.png";
+import Twitter from "../../assets/twitterlogo.png";
+import Insta from "../../assets/instagramlogo.png";
+import Git from "../../assets/githublogo.png";
 import { Link } from "react-router-dom";
+import SocialIcon from "./SocialIcon";
 
 const GameCodex = () => {
   return (
@@ -46,16 +47,18 @@ const GameCodex = () => {
           </text>
         </svg>
       </div>
-      <div className="flex -mt-10 mr-64 lg:flex-row flex-col">
-        <Link to="https://instagram.com">
-          <img src={Insta} alt="Insta"></img>
-        </Link>
-        <Link to="https://github.com">
-          <img src={Git} alt="Git"></img>
-        </Link>
-        <Link to="https://twitter.com">
-          <img src={Twitter} alt="Twitter"></img>
-        </Link>
+      <div className="flex -mt-10 mr-64 gap-3 lg:flex-row flex-col">
+        <SocialIcon
+          url="https://instagram.com"
+          image={Insta}
+          text="Instagram"
+        />
+        <SocialIcon
+          url="https://github.com/dhruvchandak30"
+          image={Git}
+          text="Github"
+        />
+        <SocialIcon url="https://twitter.com" image={Twitter} text="Twitter" />
       </div>
     </div>
   );
