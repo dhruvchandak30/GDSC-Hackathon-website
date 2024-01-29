@@ -5,6 +5,7 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import GameCodex from "../components/GameCodex/GameCodex";
 import Hero from "../components/Hero/Hero";
 import Timeline from "../components/TimeLine/Timeline";
+import Faq from "../components/Faq/Faq";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <AboutUs />
       <GameCodex />
       <Timeline/>
+      <Faq/>
     </div>
   );
 };
