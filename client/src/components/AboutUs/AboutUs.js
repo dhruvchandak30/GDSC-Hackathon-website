@@ -7,15 +7,16 @@ const AboutUs = () => {
   return (
     <div className="">
       <div className="flex items-center justify-center my-16">
-        <h1 className="font-pricedown text-white lg:text-8xl text-3xl AboutUs">
+        <h1 className="font-pricedown text-white lg:text-7xl  AboutUs">
           About Us
         </h1>
       </div>
       <div className="flex flex-row justify-center">
-        <img alt="aboutUS" src={img1}></img>
-        <img alt="aboutUS" src={Ramsha1}></img>
+        <img alt="aboutUS" className="" src={img1}></img>
+        <img alt="aboutUS" className="" src={Ramsha1}></img>
         <img alt="aboutUS" src={img3}></img>
       </div>
+      <div></div>
     </div>
   );
 };

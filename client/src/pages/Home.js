@@ -15,12 +15,12 @@ const Home = () => {
       {/* <Navbar /> */}
       <Hero />
       {/* <Heading /> */}
-      <AboutUs />
+      {/* <AboutUs /> */}
       <GameCodex />
       <Event />
       <Timeline/>
       <Faq/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 };
