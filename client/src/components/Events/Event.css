@@ -1,9 +1,21 @@
-.EventImage:hover + .EventContainer{
+.EventImage:hover + .EventContainer {
   display: block;
+}
+.EventContainer:hover {
+  display: block;
+}
+.EventContainer:hover + .EventImage {
+  filter: brightness(50%);
+}
+.EventImage:hover +.EventImage{
+  filter: brightness(50%);
 }
 
 .EventImage:hover {
   filter: brightness(50%);
+}
+#EventContainer1{
+  display: none;
 }
 
 .EventContainer {
@@ -14,9 +26,5 @@
   .EventContainer {
     max-height: 300px;
     overflow-y: scroll;
-  }
-
-  .EventContainer.visible {
-    display: block;
   }
 }
