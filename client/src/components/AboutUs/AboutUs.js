@@ -1,7 +1,5 @@
 import React from "react";
-import img1 from "../../assets/Crowd1.jpg";
-import Ramsha1 from "../../assets/Ramsha1.png";
-import img3 from "../../assets/Crowd2.jpg";
+import AboutUsImage from "../../assets/AboutUsImage.png";
 
 const AboutUs = () => {
   return (
@@ -12,9 +10,7 @@ const AboutUs = () => {
         </h1>
       </div>
       <div className="flex flex-row justify-center">
-        <img alt="aboutUS" className="" src={img1}></img>
-        <img alt="aboutUS" className="" src={Ramsha1}></img>
-        <img alt="aboutUS" src={img3}></img>
+        <img alt="About US" src={AboutUsImage}></img>
       </div>
       <div></div>
     </div>
