@@ -8,6 +8,7 @@ import Hero from "../components/Hero/Hero";
 import Timeline from "../components/TimeLine/Timeline";
 import Faq from "../components/Faq/Faq";
 import Footer from "../components/Footer/Footer";
+import PS from "../components/PS/PS";
 
 const Home = () => {
   return (
@@ -15,12 +16,13 @@ const Home = () => {
       {/* <Navbar /> */}
       <Hero />
       {/* <Heading /> */}
-      {/* <AboutUs /> */}
+      <AboutUs />
       <GameCodex />
       <Event />
-      <Timeline/>
-      <Faq/>
-      {/* <Footer/> */}
+      <PS />
+      <Timeline />
+      <Faq />
+      <Footer />
     </div>
   );
 };
