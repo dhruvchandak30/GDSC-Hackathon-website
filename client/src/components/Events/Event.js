@@ -37,7 +37,7 @@ const Event = () => {
   };
 
   return (
-    <div>
+    <div className="my-16">
       <div className="flex justify-center align-middle py-16">
         <h1 className="font-pricedown text-7xl  text-white ">Events</h1>
       </div>
