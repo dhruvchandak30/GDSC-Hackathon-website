@@ -1,0 +1,22 @@
+.EventImage:hover + .EventContainer{
+  display: block;
+}
+
+.EventImage:hover {
+  filter: brightness(50%);
+}
+
+.EventContainer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .EventContainer {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  .EventContainer.visible {
+    display: block;
+  }
+}

@@ -12,10 +12,11 @@ const AboutUs = () => {
         </h1>
       </div>
       <div className="flex flex-row justify-center">
-        <img alt="aboutUS" src={img1}></img>
-        <img alt="aboutUS" src={Ramsha1}></img>
+        <img alt="aboutUS" className="" src={img1}></img>
+        <img alt="aboutUS" className="" src={Ramsha1}></img>
         <img alt="aboutUS" src={img3}></img>
       </div>
+      <div></div>
     </div>
   );
 };
