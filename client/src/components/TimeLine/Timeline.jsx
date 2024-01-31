@@ -46,8 +46,8 @@ const Timeline = () => {
         {data.map((e, ind) => (
           <li key={ind}>
             <div className="hl text-white bgtime h-[350px] flex md:w-[300px] lg:w-[450px] xl:w-[500px] relative bottom-0 p-4">
-              <div className="w-[70%] mx-auto text-center text-xl leading-6 px-2 items-center flex flex-col justify-center">
-                <h1 className="mb-5">{e.head}</h1>
+              <div className="lg:w-[70%] w-full mx-auto text-center text-base md:text-xl leading-6 px-2 items-center flex flex-col justify-center">
+                <h1 className="mb-2 md:mb-5">{e.head}</h1>
                 <p>{e.content}</p>
               </div>
             </div>

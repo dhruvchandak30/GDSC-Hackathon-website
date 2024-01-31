@@ -23,9 +23,9 @@ const Navbar = () => {
         </div>
         <ul className="flex gap-x-6 ">
           <li
-            className={`text-center w-20 h-[30px] ${bg[0] ? "back" : ""}`}
-            // onMouseEnter={() => hoverHandler(0)}
-            // onMouseLeave={hoverOut}
+            className={`text-center w-fit px-8 h-[30px]  ${bg[0] ? "back" : ""}`}
+            onMouseEnter={() => hoverHandler(0)}
+            onMouseLeave={hoverOut}
           >
             <h5 className="text-[#FFFFFF] heading cursor-pointer w-full">
               Home
@@ -33,22 +33,22 @@ const Navbar = () => {
           </li>
           <li
             className={`text-center px-6 h-[30px]  ${bg[1] ? "back" : ""}`}
-            // onMouseEnter={() => hoverHandler(1)}
-            // onMouseLeave={hoverOut}
+            onMouseEnter={() => hoverHandler(1)}
+            onMouseLeave={hoverOut}
           >
             <h5 className="text-[#FFFFFF] heading cursor-pointer">About Us</h5>
           </li>
           <li
             className={`text-center px-6  h-[30px]  ${bg[2] ? "back" : ""}`}
-            // onMouseEnter={() => hoverHandler(2)}
-            // onMouseLeave={hoverOut}
+            onMouseEnter={() => hoverHandler(2)}
+            onMouseLeave={hoverOut}
           >
             <h5 className="text-[#FFFFFF] heading cursor-pointer">Timeline</h5>
           </li>
           <li
-            className={`text-center px-6 h-[30px] ${bg[3] ? "back" : ""}`}
-            // onMouseEnter={() => hoverHandler(3)}
-            // onMouseLeave={hoverOut}
+            className={`text-center w-fit px-4 ps-6 h-[30px] ${bg[3] ? "back" : ""}`}
+            onMouseEnter={() => hoverHandler(3)}
+            onMouseLeave={hoverOut}
           >
             <h5 className="text-[#FFFFFF] heading cursor-pointer">
               Problem Statements

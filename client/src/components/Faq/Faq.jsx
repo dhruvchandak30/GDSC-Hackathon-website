@@ -28,7 +28,7 @@ const Faq = () => {
         {data.map((e) => (
           <motion.div
             key={data.indexOf(e)}
-            className={`w-[80%] mx-auto px-6 py-2 border-2 border-white rounded-lg mb-6 ${
+            className={`sm:w-[80%] w-[95%] mx-auto px-6 py-2 border-2 border-white rounded-lg mb-6 ${
               toggleFaq[data.indexOf(e)] ? "bg-[#9D3E47]" : "bg-transparent"
             } `}
           >

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import logo from "../../assets/logo.svg";
 import hambuger from "../../assets/Hamberger.svg";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const HamburgerNavbar = () => {
   const [bg, setBg] = useState([false, false, false, false]);
@@ -36,7 +36,7 @@ const HamburgerNavbar = () => {
             onClick={handleMenuToggle}
           />
         </div>
-        {/* <div
+        <motion.div
           initial={{
             x: 250,
           }}
@@ -81,7 +81,7 @@ const HamburgerNavbar = () => {
               Problem Statements
             </h5>
           </li>
-        </div> */}
+        </motion.div>
       </div>
     </div>
   );
