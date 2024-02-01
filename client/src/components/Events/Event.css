@@ -15,7 +15,7 @@
   filter: brightness(50%);
 }
 #EventContainer1{
-  display: none;
+  /* display: none; */
 }
 
 .EventContainer {

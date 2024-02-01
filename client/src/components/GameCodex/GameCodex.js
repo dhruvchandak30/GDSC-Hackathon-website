@@ -17,20 +17,24 @@ const GameCodex = () => {
         </h1>
       </div>
       <div>
-        <img src={GameCodexRect} alt="" className="w-full"></img>
-        <p className="absolute text-white lg:bottom-32 lg:left-[25%] lg:w-1/2 text-center flex lg:justify-center lg:items-center top-16 lg:text-[18px] text-[11px] py-2 px-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
+        <img
+          src={GameCodexRect}
+          alt=""
+          className="w-full lg:h-full h-[10rem]"
+        ></img>
+        <p className="absolute text-white lg:bottom-32 lg:left-[25%] lg:w-1/2  text-center flex lg:justify-center lg:items-center top-16 lg:text-[18px] text-[11px] py-2 lg:px-8 px-12">
+          GDSC LNMIIT presents GameCodeX, the highly anticipated hackathon for
+          tech enthusiasts. Themed around GTA 6, this event offers a unique
+          blend of insightful talks, hands-on coding challenges, and game
+          development contests at The LNMIIT, Jaipur. Join us for a journey of
+          discovery, learning, and triumph. GameCodeX is not just about coding;
+          well renowned speakers will share their valuable insights on the
+          tech-driven world.
         </p>
       </div>
       <div className="flex lg:-mt-10 lg:mr-64 gap-3 mt-8 lg:flex-row flex-col items-center justify-center">
         <SocialIcon
-          url="https://instagram.com"
+          url="https://www.instagram.com/gamecodex_lnm/?img_index=1"
           image={Insta}
           text="Instagram"
         />

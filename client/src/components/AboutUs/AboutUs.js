@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <div className="">
       <div className="flex items-center justify-center my-16">
-        <h1 className="font-pricedown text-white lg:text-7xl  AboutUs">
+        <h1 className="font-pricedown text-white text-7xl  AboutUs">
           About Us
         </h1>
       </div>

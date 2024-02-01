@@ -2,90 +2,116 @@ import React, { useState } from "react";
 import AryanEvents from "../../assets/AryanEvents.png";
 import EventTitleCard from "./EventTitleCard";
 import "./Event.css";
+import EventDescCard from "./EventDescCard";
+
+const EventData = [
+  {
+    title: "Code Jam",
+    text: "An exciting platform for all the game developers out there to showcase their game development skills on the basis of the problem statement which will be provided to them along with the release of the problem statement for the hackathon.",
+    img: AryanEvents,
+  },
+  {
+    title: "Hackathon",
+    text: "An exciting platform for all the game developers out there to showcase their game development skills on the basis of the problem statement which will be provided to them along with the release of the problem statement for the hackathon.",
+    img: AryanEvents,
+  },
+  {
+    title: "Talk",
+    text: "GameCodeX isn’t all about those coding and development stuff. Well-renowned speakers will take up the stage to share valuable insights and throw lights on what’s going on in this tech-driven world. ",
+    img: AryanEvents,
+  },
+  {
+    title: "CP",
+    text: "GameCodeX gives you a chance to display your programming skills with a coding contest lined up on the same day. The problem statements shall be provided, and you need to step up to prove your mettle against your worthy competitors and emerge victorious amongst all.",
+    img: AryanEvents,
+  },
+];
 
 const Event = () => {
-  const [eventsImage, setEventsImage] = useState(AryanEvents);
-  const [EventTitle, setEventTitle] = useState("Code Jam");
-
-  const ChangeEventHandler = (text) => {
-    setEventTitle(text);
-    if (text === "Hackathon") {
-      setEventsImage(AryanEvents);
-      setEventTitle(text);
-    } else if (text === "Code Jam") {
-      setEventsImage(AryanEvents);
-    } else if (text === "Talk") {
-      setEventsImage();
-    } else if (text === "CP") {
-      setEventsImage();
-    }
-  };
+  const [activeCard, setActiveCard] = useState(null);
+  const [events, setEventsData] = useState(EventData[0]);
   const [EventImageVisibility, setEventImage] = useState(true);
 
-  const ShowHideDescriptionHandler = () => {
-    if (!EventImageVisibility) {
-      document.getElementById("EventImagee").style.filter = "brightness(100%)";
-      document.getElementById("EventContainer1").style.display = "none";
-      setEventImage(!EventImageVisibility);
-      return;
-    } else {
-      setEventImage(!EventImageVisibility);
-      document.getElementById("EventContainer1").style.display = "block";
-      document.getElementById("EventImagee").style.filter = "brightness(50%)";
-      return;
+  const ChangeEventHandler = (text) => {
+    setActiveCard(text);
+    switch (text) {
+      case "Hackathon":
+        setEventsData(EventData[1]);
+        break;
+      case "Code Jam":
+        setEventsData(EventData[0]);
+        break;
+      case "Talk":
+        setEventsData(EventData[2]);
+        break;
+      case "CP":
+        setEventsData(EventData[3]);
+        break;
+      default:
+        break;
     }
+  };
+
+  const ShowHideDescriptionHandler = () => {
+    setEventImage(!EventImageVisibility);
   };
 
   return (
     <div className="my-16">
       <div className="flex justify-center align-middle py-16">
-        <h1 className="font-pricedown text-7xl  text-white ">Events</h1>
+        <h1 className="font-pricedown text-7xl text-white">Events</h1>
       </div>
-      <div className="flex justify-center">
-        <div className="flex flex-col p-4 gap-4 justify-evenly">
+
+      <div className="flex lg:flex-row flex-col lg:justify-center">
+        <div className="flex lg:flex-col flex-wrap p-4 gap-4 justify-evenly">
           <EventTitleCard
             onClick={() => ChangeEventHandler("Code Jam")}
             text="Code Jam"
+            isActive={activeCard === "Code Jam"}
           />
           <EventTitleCard
             onClick={() => ChangeEventHandler("Hackathon")}
             text="Hackathon"
+            isActive={activeCard === "Hackathon"}
           />
           <EventTitleCard
             onClick={() => ChangeEventHandler("Talk")}
             text="Talk"
+            isActive={activeCard === "Talk"}
           />
-          <EventTitleCard onClick={() => ChangeEventHandler("CP")} text="CP" />
+          <EventTitleCard
+            onClick={() => ChangeEventHandler("CP")}
+            text="CP"
+            isActive={activeCard === "CP"}
+          />
         </div>
 
-        <div className="flex items-cente relative">
+        <div className="flex items-center relative">
           <div
             className=""
             onMouseEnter={ShowHideDescriptionHandler}
-            // onMouseLeave={ShowHideDescriptionHandler}
             onClick={ShowHideDescriptionHandler}
           >
             <img
-              src={eventsImage}
+              src={events.img}
               id="EventImagee"
-              className="items-center flex justify-between "
+              className="items-center flex justify-between"
               alt="Events"
+              style={{
+                filter: !EventImageVisibility
+                  ? "brightness(100%)"
+                  : "brightness(50%)",
+              }}
             />
           </div>
-          <div
-            id="EventContainer1"
-            className="text-white  ml-[10%] lg:mt-[10%] absolute"
-          >
-            <h1 className="lg:text-5xl text-3xl lg:my-2 font-array">
-              {EventTitle}
-            </h1>
-            <p className="text-white lg:text-xl text-[12px] lg:w-2/3 p-2 ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
-              non quis exercitationem culpa nesciunt nihil aut nostrum explicabo
-              reprehenderit optio amet ab temporibus asperiores quasi
-              cupiditate. Voluptatum ducimus voluptates voluptas?
-            </p>
-          </div>
+          {EventImageVisibility && (
+            <div
+              id="EventContainer1"
+              className={`text-white  absolute ml-[10%] lg:mt-[10%] lg:p-0 p-8`}
+            >
+              <EventDescCard title={events.title} text={events.text} />
+            </div>
+          )}
         </div>
       </div>
     </div>
