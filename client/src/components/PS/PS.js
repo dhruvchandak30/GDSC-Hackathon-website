@@ -5,7 +5,7 @@ import PSData from "./PSData";
 const PS = () => {
   return (
     <div className="my-8">
-      <div className="font-pricedown text-white text-7xl text-center my-32">
+      <div className="font-pricedown text-white lg:text-7xl text-6xl text-center my-32">
         Problem Statements
       </div>
       <div className="flex lg:flex-row  lg:flex-wrap flex-col justify-evenly items-center">
