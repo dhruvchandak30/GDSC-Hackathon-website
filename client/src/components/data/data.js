@@ -1,28 +1,23 @@
 const Data=[
     {
-        head:"Phase 01",
-        content:"Campus Ambassador Role: As a Campus Ambassador for Vivacity, you will play a crucial role in representing and promoting this vibrant cultural fiesta at your college or university.",
+        head:"Phase 1",
+        content:"Problem statements for all the related events shall be made available on the website for the participants to get going.",
     },
     {
-        head:"Phase 01",
+        head:"Phase 2",
 
-        content:"The most significant opportunity to represent your college in the biggest cultural fest of Rajasthan, improving your leadership qualities.",
+        content:"Participants need to submit their solutions within 15 days of the announcement of the problem statement. Top 15 teams will be displayed on the website and will be given the chance to move ahead.",
     },
     {
-        head:"Phase 01",
+        head:"Phase 3",
 
-        content:"Spreading Awareness: Your primary responsibility will be to spread the word about the various events and activities that Vivacity has to offer among your fellow students and teachers.",
+        content:"Selected participants will present solutions at The LNMIIT, Jaipur campus, judged by experienced professors. University competitions and informative talk sessions will also take place to give the participants an unforgettable experience.",
     },
     {
-        head:"Phase 01",
+        head:"Phase 4",
 
-        content:"As VIVACITY invites many celebrities from diverse fields, you will get a chance to interact with indelible personalities.",
-    },
-    {
-        head:"Phase 01",
-
-        content:"Bridge of Communication: You'll serve as a vital link between your college or university and Vivacity, facilitating effective communication and feedback exchange.",
-    },
+        content:"Closing ceremony with winners announced for the hackathon and other competitions.",
+    }
 ]
 
 export default Data;

@@ -1,24 +1,32 @@
-.homebg{
-    background: linear-gradient(30deg, #000 10.66%, rgba(0, 0, 0, 0.30) 99.81%),url("../../assets/Background.png");
-    /* background: ; */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.homebg {
+  background: linear-gradient(30deg, #000 10.66%, rgba(0, 0, 0, 0.3) 99.81%),
+    url("../../assets/Background.png");
+  /* background: ; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.bg1{
-    background: url("../../assets/bg-1.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.bg1 {
+  background: url("../../assets/bg-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-
-.bg2
-{
-    background: url("../../assets/bg-2.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.bg2 {
+  background: url("../../assets/bg-2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
+.textborder {
+    text-shadow: -10px -10px 0 black, 0px 0px 0 black, 0px 0px 0 black, 0px 0px 0 black;
+}
+
+@media (max-width:600px){
+    .textborder {
+        text-shadow: -5px -5px 0 black, 0px 0px 0 black, 0px 0px 0 black, 0px 0px 0 black;
+    }
+}
