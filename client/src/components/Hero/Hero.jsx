@@ -22,8 +22,8 @@ const Hero = () => {
           <div className="bg2 sm:h-[355px] h-[305px] w-full absolute top-[47%] lg:top-[45%] left-[48%] transform -translate-x-1/2 -translate-y-1/2 flex sm:flex-row flex-col justify-center lg:items-end pb-8 gap-y-4 items-center">
             <div className="text-white sm:absolute  sm:top-[10%] sm:left-[12%]">
               {/* <img src={heading} alt="" /> */}
-              <h1 className="font-pricedown text-7xl lg:text-9xl">GAME</h1>
-              <h1 className="font-pricedown text-7xl lg:text-9xl relative">
+              <h1 className="font-pricedown text-7xl lg:text-9xl textborder mb-4"> GAME</h1>
+              <h1 className="font-pricedown text-7xl lg:text-9xl relative textborder">
                 codex <span className=" text-3xl sm:text-5xl absolute bottom-0 sm:bottom-2 -right-12 am:-right-14">1.0</span>
               </h1>
             </div>

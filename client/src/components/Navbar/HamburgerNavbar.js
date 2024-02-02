@@ -32,7 +32,7 @@ const HamburgerNavbar = () => {
           <img
             src={hambuger}
             alt=""
-            className="cursor-pointer"
+            className="cursor-pointer z-[100]"
             onClick={handleMenuToggle}
           />
         </div>
@@ -47,7 +47,7 @@ const HamburgerNavbar = () => {
             // delay: 0.5,
             duration: 0.5,
           }}
-          className="flex flex-col gap-y-8 justify-center items-center w-[250px] absolute right-0 top-0 pt-24 pb-16 z-[50] px-4"
+          className="flex bg-black flex-col gap-y-8 justify-center items-center w-[250px] absolute -right-[250px] top-20 pt-24 pb-16 z-[50] px-4"
         >
           <li
             className={`text-center w-20 h-[30px] ${bg[0] ? "back" : ""}`}

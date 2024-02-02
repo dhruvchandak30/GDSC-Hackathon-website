@@ -12,7 +12,7 @@ import PS from "../components/PS/PS";
 
 const Home = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-x-hidden">
       {/* <Navbar /> */}
       <Hero />
       {/* <Heading /> */}
