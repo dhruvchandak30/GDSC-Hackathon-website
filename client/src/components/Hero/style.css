@@ -24,3 +24,9 @@
 .textborder {
     text-shadow: -10px -10px 0 black, 0px 0px 0 black, 0px 0px 0 black, 0px 0px 0 black;
 }
+
+@media (max-width:600px){
+    .textborder {
+        text-shadow: -5px -5px 0 black, 0px 0px 0 black, 0px 0px 0 black, 0px 0px 0 black;
+    }
+}

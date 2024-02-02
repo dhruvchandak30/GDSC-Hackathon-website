@@ -45,10 +45,10 @@ const Timeline = () => {
       <ul>
         {data.map((e, ind) => (
           <li key={ind}>
-            <div className=" text-white bg-[#EC576D]  h-[300px] flex md:w-[300px] lg:w-[350px] xl:w-[400px] relative bottom-0 lg:p-4">
+            <div className=" text-white bg-[#9D3E47]  h-[300px] flex md:w-[300px] lg:w-[350px] xl:w-[400px] relative bottom-0 lg:p-4">
               <div className=" w-full mx-auto text-center text-base md:text-xl  px-2 items-center flex flex-col justify-center">
-                <h1 className="mb-2 md:mb-3">{e.head}</h1>
-                <p className="leading-5 sm:leading-6">{e.content}</p>
+                <h1 className="mb-2 md:mb-3 font-array text-2xl">{e.head}</h1>
+                <p className="leading-5 sm:leading-6 font-instagram text-lg">{e.content}</p>
               </div>
             </div>
           </li>

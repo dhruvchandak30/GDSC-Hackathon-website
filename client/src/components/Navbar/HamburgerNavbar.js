@@ -3,6 +3,7 @@ import { useState } from "react";
 import logo from "../../assets/logo.svg";
 import hambuger from "../../assets/Hamberger.svg";
 import { motion } from "framer-motion";
+import { RxCross2 } from "react-icons/rx";
 
 const HamburgerNavbar = () => {
   const [bg, setBg] = useState([false, false, false, false]);
@@ -36,52 +37,49 @@ const HamburgerNavbar = () => {
             onClick={handleMenuToggle}
           />
         </div>
-        <motion.div
-          initial={{
-            x: 250,
-          }}
-          animate={{
-            x: menuOpen ? 0 : 250,
-          }}
-          transition={{
-            // delay: 0.5,
-            duration: 0.5,
-          }}
-          className="flex bg-black flex-col gap-y-8 justify-center items-center w-[250px] absolute -right-[250px] top-20 pt-24 pb-16 z-[50] px-4"
-        >
-          <li
-            className={`text-center w-20 h-[30px] ${bg[0] ? "back" : ""}`}
-            // onMouseEnter={() => hoverHandler(0)}
-            // onMouseLeave={hoverOut}
-          >
-            <h5 className="text-[#FFFFFF] heading cursor-pointer w-full">
-              Home
-            </h5>
-          </li>
-          <li
-            className={`text-center px-6 h-[30px]  ${bg[1] ? "back" : ""}`}
-            // onMouseEnter={() => hoverHandler(1)}
-            // onMouseLeave={hoverOut}
-          >
-            <h5 className="text-[#FFFFFF] heading cursor-pointer">About Us</h5>
-          </li>
-          <li
-            className={`text-center px-6  h-[30px]  ${bg[2] ? "back" : ""}`}
-            // onMouseEnter={() => hoverHandler(2)}
-            // onMouseLeave={hoverOut}
-          >
-            <h5 className="text-[#FFFFFF] heading cursor-pointer">Timeline</h5>
-          </li>
-          <li
-            className={`text-center px-6 h-[30px] ${bg[3] ? "back" : ""}`}
-            // onMouseEnter={() => hoverHandler(3)}
-            // onMouseLeave={hoverOut}
-          >
-            <h5 className="text-[#FFFFFF] heading cursor-pointer">
-              Problem Statements
-            </h5>
-          </li>
-        </motion.div>
+        {menuOpen ? (
+          <div className=" bg-[#000000b5]  w-[90%] sm:w-[75%] left-1/2 -translate-x-1/2 absolute top-20 pt-24 pb-16 z-[50] px-4">
+            <RxCross2
+              className="text-white absolute right-4 top-4 cursor-pointer"
+              size={28}
+              onClick={() => setMenuOpen(false)}
+            />
+            <div className="flex flex-col gap-y-4 justify-center items-center">
+              <li
+                className={`text-center sm:w-[50%] w-[90%] bg-black py-2 px-6 list-none`}
+                onClick={() => setMenuOpen(false)}
+              >
+                <h5 className="text-[#FFFFFF] heading cursor-pointer w-full">
+                  Home
+                </h5>
+              </li>
+              <li
+                className={`text-center sm:w-[50%] w-[90%]  bg-black py-2 px-6 list-none`}
+                onClick={() => setMenuOpen(false)}
+              >
+                <h5 className="text-[#FFFFFF] heading cursor-pointer">
+                  About Us
+                </h5>
+              </li>
+              <li
+                className={`text-center sm:w-[50%] w-[90%] bg-black py-2 px-6 list-none`}
+                onClick={() => setMenuOpen(false)}
+              >
+                <h5 className="text-[#FFFFFF] heading cursor-pointer">
+                  Timeline
+                </h5>
+              </li>
+              <li
+                className={`text-center sm:w-[50%] w-[90%]  bg-black py-2 px-6 list-none`}
+                onClick={() => setMenuOpen(false)}
+              >
+                <h5 className="text-[#FFFFFF] heading cursor-pointer">
+                  Problem Statements
+                </h5>
+              </li>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
