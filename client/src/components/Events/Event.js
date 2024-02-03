@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AryanEvents from "../../assets/AryanEvents.png";
+import AryanEvents from "../../assets/AryanEvents.jpg";
 import HackathonImage from "../../assets/HackathonImage.jpg";
 import Talk from "../../assets/Talk.jpg";
 import CP from "../../assets/CP.jpg";
@@ -32,8 +32,8 @@ const EventData = [
 
 const Event = () => {
   const [activeCard, setActiveCard] = useState(null);
-  const [events, setEventsData] = useState(EventData[0]);
-  const [EventImageVisibility, setEventImage] = useState(true);
+  const [events, setEventsData] = useState(EventData[1]);
+  const [EventImageVisibility, setEventImage] = useState(false);
 
   const ChangeEventHandler = (text) => {
     setActiveCard(text);
@@ -60,33 +60,48 @@ const Event = () => {
   };
 
   return (
-    <div id="EventID" className="my-16 flex flex-col justify-center items-center">
-      <div className="flex justify-center align-middle py-16">
+    <div
+      id="EventID"
+      className="my-16 flex flex-col justify-center items-center"
+    >
+      <div
+        data-aos="fade-up"
+        data-aos-once="true"
+        className="flex justify-center align-middle py-16"
+      >
         <h1 className="font-pricedown text-7xl text-white">Events</h1>
       </div>
 
       <div className="flex lg:flex-row flex-col lg:justify-center ">
         <div className="flex lg:flex-col flex-wrap p-4 gap-4 justify-evenly">
-          <EventTitleCard
-            onClick={() => ChangeEventHandler("Code Jam")}
-            text="Code Jam"
-            isActive={activeCard === "Code Jam"}
-          />
-          <EventTitleCard
-            onClick={() => ChangeEventHandler("Hackathon")}
-            text="Hackathon"
-            isActive={activeCard === "Hackathon"}
-          />
-          <EventTitleCard
-            onClick={() => ChangeEventHandler("Talk")}
-            text="Talk"
-            isActive={activeCard === "Talk"}
-          />
-          <EventTitleCard
-            onClick={() => ChangeEventHandler("CP")}
-            text="CP"
-            isActive={activeCard === "CP"}
-          />
+          <div data-aos="fade-right" data-aos-once="true">
+            <EventTitleCard
+              onClick={() => ChangeEventHandler("Hackathon")}
+              text="Hackathon"
+              isActive={activeCard === "Hackathon"}
+            />
+          </div>
+          <div data-aos="fade-right" data-aos-once="true">
+            <EventTitleCard
+              onClick={() => ChangeEventHandler("Code Jam")}
+              text="Code Jam"
+              isActive={activeCard === "Code Jam"}
+            />
+          </div>
+          <div data-aos="fade-right" data-aos-once="true">
+            <EventTitleCard
+              onClick={() => ChangeEventHandler("Talk")}
+              text="Talk"
+              isActive={activeCard === "Talk"}
+            />
+          </div>
+          <div data-aos="fade-right" data-aos-once="true">
+            <EventTitleCard
+              onClick={() => ChangeEventHandler("CP")}
+              text="CP"
+              isActive={activeCard === "CP"}
+            />
+          </div>
         </div>
 
         <div className="flex items-center relative">

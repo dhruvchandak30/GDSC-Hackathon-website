@@ -39,8 +39,8 @@ const Footer = () => {
         </div>
         <div className="flex lg:flex-row lg:w-1/2 justify-around  items-center lg:p-0  p-4">
           <div className="text-white">
-            {/* <h1 className="text-3xl font-bold mb-4">Navigate to</h1> */}
-            <ul className="flex flex-col gap-y-2 text-center font-medium text-xl">
+            <h1 className="text-3xl font-bold mb-4">Navigate to</h1>
+            <ul className="flex flex-col gap-y-2  font-medium text-xl">
               <li onClick={scrollAboutUs} className="cursor-pointer">
                 About us
               </li>
