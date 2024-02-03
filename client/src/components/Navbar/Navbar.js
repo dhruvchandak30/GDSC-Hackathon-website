@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.svg";
 import "./navbar.css";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [bg, setBg] = useState([false, false, false, false]);
