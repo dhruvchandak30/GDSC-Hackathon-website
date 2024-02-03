@@ -16,6 +16,15 @@ const Hero = () => {
     else setStatus(false);
   }, [wid]);
 
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setIsVisible(true);
+    }, 2500);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
     <div className="homebg h-screen ">
       {status ? <HamburgerNavbar /> : <Navbar />}
@@ -79,11 +88,16 @@ const Hero = () => {
                 </span>
               </motion.h1>
             </div>
-            <div className="text-[#EC576D] sm:absolute sm:top-[50%] sm:-translate-y-1/2 sm:right-[10%]">
+            <div className=" container text-[#EC576D] absolute lg:top-[50%] top-[72%]  lg:left-[55%] sm:-translate-y-1/2 left-[7%] ">
               {/* <img src={title} alt="" /> */}
-              <h1 className="font-array text-3xl lg:text-5xl">
-                Dev Hackathon <br /> By <br /> GDSC, LNMIIT
+              <h1 className="text1 font-array text-3xl lg:text-5xl ">
+                Dev Hackathon By
               </h1>
+              {isVisible && (
+                <h1 className="text2 font-array text-3xl lg:text-5xl ">
+                  GDSC, LNMIIT
+                </h1>
+              )}
             </div>
           </motion.div>
           <motion.div

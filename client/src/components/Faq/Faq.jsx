@@ -43,7 +43,11 @@ const Faq = () => {
               toggleFaq[data.indexOf(e)] ? "bg-[#9D3E47]" : "bg-transparent"
             } `}
           >
-            <div className="flex justify-between">
+            <div
+              data-aos="fade-right"
+              data-aos-once="true"
+              className="flex justify-between"
+            >
               {" "}
               <h1 className={`text-white`}>{e.question}</h1>
               <IoMdArrowDropdown
