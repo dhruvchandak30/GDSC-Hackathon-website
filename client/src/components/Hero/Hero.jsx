@@ -55,7 +55,7 @@ const Hero = () => {
                   scale: 1,
                   opacity: 1,
                 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
                 className="font-pricedown text-7xl lg:text-9xl textborder mb-4"
               >
                 {" "}
@@ -70,7 +70,7 @@ const Hero = () => {
                   scale: 1,
                   opacity: 1,
                 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
                 className="font-pricedown text-7xl lg:text-9xl relative textborder"
               >
                 codex{" "}
@@ -95,7 +95,7 @@ const Hero = () => {
               scale: 1,
               opacity: 1,
             }}
-            transition={{ duration: 0.4, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
             className=" absolute sm:bottom-[-20%] bottom-[-20%] sm:right-[18%] transform translate-x-1/2 w-32 right-[30%]"
           >
             <img src={register} alt="" className="cursor-pointer" />{" "}
