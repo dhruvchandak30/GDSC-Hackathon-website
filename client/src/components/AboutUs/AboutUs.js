@@ -7,6 +7,7 @@ const AboutUs = () => {
       <div
         data-aos="fade-up"
         data-aos-once="true"
+        data-aos-delay="500"
         className="flex items-center justify-center my-16"
       >
         <h1 className="font-pricedown text-white text-7xl  AboutUs">

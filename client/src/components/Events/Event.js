@@ -74,28 +74,28 @@ const Event = () => {
 
       <div className="flex lg:flex-row flex-col lg:justify-center ">
         <div className="flex lg:flex-col flex-wrap p-4 gap-4 justify-evenly">
-          <div data-aos="fade-right" data-aos-once="true">
+          <div data-aos="fade-right"   data-aos-delay="500"  data-aos-once="true">
             <EventTitleCard
               onClick={() => ChangeEventHandler("Hackathon")}
               text="Hackathon"
               isActive={activeCard === "Hackathon"}
             />
           </div>
-          <div data-aos="fade-right" data-aos-once="true">
+          <div data-aos="fade-right"   data-aos-delay="500" data-aos-once="true">
             <EventTitleCard
               onClick={() => ChangeEventHandler("Code Jam")}
               text="Code Jam"
               isActive={activeCard === "Code Jam"}
             />
           </div>
-          <div data-aos="fade-right" data-aos-once="true">
+          <div data-aos="fade-right"   data-aos-delay="500" data-aos-once="true">
             <EventTitleCard
               onClick={() => ChangeEventHandler("Talk")}
               text="Talk"
               isActive={activeCard === "Talk"}
             />
           </div>
-          <div data-aos="fade-right" data-aos-once="true">
+          <div data-aos="fade-right"   data-aos-delay="500" data-aos-once="true">
             <EventTitleCard
               onClick={() => ChangeEventHandler("CP")}
               text="CP"
