@@ -5,20 +5,33 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import "./fonts/Array-Regular.woff";
 import "./fonts/pricedown_bl.ttf";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Preloader from "./components/Loader/Loader";
 
 function App() {
+  const [isLoading, setLoading] = useState(true);
   useEffect(() => {
     AOS.init();
   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      {/* {isLoading ? (
+        <Preloader />
+      ) : ( */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+      {/* )} */}
+    </>
   );
 }
 

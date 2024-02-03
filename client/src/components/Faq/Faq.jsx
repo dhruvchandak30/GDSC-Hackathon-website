@@ -46,6 +46,7 @@ const Faq = () => {
             <div
               data-aos="fade-right"
               data-aos-once="true"
+              data-aos-delay="500"
               className="flex justify-between"
             >
               {" "}

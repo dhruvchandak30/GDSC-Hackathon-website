@@ -8,6 +8,7 @@ const PS = () => {
       <div
         data-aos="fade-up"
         data-aos-once="true"
+      
         className="font-pricedown text-white lg:text-7xl text-6xl text-center my-32"
       >
         Problem Statements

@@ -45,6 +45,7 @@ const Timeline = () => {
       <div
         data-aos="fade-up"
         data-aos-once="true"
+        data-aos-delay="500"
         className="flex  text-white font-pricedown lg:text-7xl text-6xl items-center justify-center my-16"
       >
         Timeline

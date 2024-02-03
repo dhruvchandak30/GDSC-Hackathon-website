@@ -5,7 +5,7 @@ const PSCard = ({ img, title, desc }) => {
     <div className="text-white w-[15rem] mx-32  my-8">
       <img
         data-aos="flip-left"
-        data-aos-duration="5000"
+        data-aos-duration="3000"
         data-aos-delay="500"
         data-aos-once="true"
         src={img}

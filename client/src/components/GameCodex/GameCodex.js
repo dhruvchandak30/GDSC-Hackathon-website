@@ -26,6 +26,7 @@ const GameCodex = () => {
         <p
           data-aos="zoom-in-up"
           data-aos-once="true"
+          data-aos-delay="500"
           className="absolute text-white lg:bottom-32 lg:left-[25%] lg:w-1/2  text-center flex lg:justify-center lg:items-center top-16 lg:text-[18px] text-[11px] py-2 lg:px-8 px-12"
         >
           GDSC LNMIIT presents GameCodeX, the highly anticipated hackathon for
