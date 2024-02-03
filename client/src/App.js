@@ -5,8 +5,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import "./fonts/Array-Regular.woff";
 import "./fonts/pricedown_bl.ttf";
+import AOS from "aos";
 
 function App() {
+  AOS.init();
   return (
     <BrowserRouter>
       <Routes>

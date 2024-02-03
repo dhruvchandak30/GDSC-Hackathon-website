@@ -27,8 +27,9 @@ const Faq = () => {
       <div>
         {data.map((e) => (
           <motion.div
+            onClick={() => handleFaq(data.indexOf(e))}
             key={data.indexOf(e)}
-            className={`sm:w-[80%] w-[95%] mx-auto px-6 py-2 border-2 border-white rounded-lg mb-6 font-instagram text-xl ${
+            className={` cursor-pointer sm:w-[80%] w-[95%] mx-auto px-6 py-2 border-2 border-white rounded-lg mb-6 font-instagram text-xl ${
               toggleFaq[data.indexOf(e)] ? "bg-[#9D3E47]" : "bg-transparent"
             } `}
           >
@@ -42,7 +43,7 @@ const Faq = () => {
                     : "text-[#FFFFFF80] rotate-0"
                 }`}
                 size={35}
-                onClick={() => handleFaq(data.indexOf(e))}
+                // onClick={() => handleFaq(data.indexOf(e))}
               />
             </div>
             <p

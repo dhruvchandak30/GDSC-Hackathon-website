@@ -32,8 +32,8 @@ const EventData = [
 
 const Event = () => {
   const [activeCard, setActiveCard] = useState(null);
-  const [events, setEventsData] = useState(EventData[0]);
-  const [EventImageVisibility, setEventImage] = useState(true);
+  const [events, setEventsData] = useState(EventData[1]);
+  const [EventImageVisibility, setEventImage] = useState(false);
 
   const ChangeEventHandler = (text) => {
     setActiveCard(text);
@@ -67,16 +67,17 @@ const Event = () => {
 
       <div className="flex lg:flex-row flex-col lg:justify-center ">
         <div className="flex lg:flex-col flex-wrap p-4 gap-4 justify-evenly">
+        <EventTitleCard
+            onClick={() => ChangeEventHandler("Hackathon")}
+            text="Hackathon"
+            isActive={activeCard === "Hackathon"}
+          />
           <EventTitleCard
             onClick={() => ChangeEventHandler("Code Jam")}
             text="Code Jam"
             isActive={activeCard === "Code Jam"}
           />
-          <EventTitleCard
-            onClick={() => ChangeEventHandler("Hackathon")}
-            text="Hackathon"
-            isActive={activeCard === "Hackathon"}
-          />
+        
           <EventTitleCard
             onClick={() => ChangeEventHandler("Talk")}
             text="Talk"
