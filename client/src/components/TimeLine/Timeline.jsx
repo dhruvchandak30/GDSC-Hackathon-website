@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import "./timeline.css";
 import data from "../data/data";
-import time from "../../assets/timeline.svg"
+import time from "../../assets/timeline.svg";
 
 const Timeline = () => {
   useEffect(() => {
@@ -30,7 +30,7 @@ const Timeline = () => {
       });
     }
 
-    handleScroll(); // Call the function on initial load
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -38,9 +38,16 @@ const Timeline = () => {
     };
   }, []);
   return (
-    <div id="TimeLineid" className={` timeline w-full px-6 sm:px-12 md:px-16  py-20`}>
-     <div className="flex items-center justify-center my-16">
-        <img src={time} alt="About Us"></img>
+    <div
+      id="TimeLineid"
+      className={` timeline w-full px-6 sm:px-12 md:px-16  py-20`}
+    >
+      <div
+        data-aos="fade-up"
+        data-aos-once="true"
+        className="flex  text-white font-pricedown lg:text-7xl text-6xl items-center justify-center my-16"
+      >
+        Timeline
       </div>
       <ul>
         {data.map((e, ind) => (
@@ -48,7 +55,9 @@ const Timeline = () => {
             <div className=" text-white bg-[#9D3E47]  h-[300px] flex md:w-[300px] lg:w-[350px] xl:w-[400px] relative bottom-0 lg:p-4">
               <div className=" w-full mx-auto text-center text-base md:text-xl  px-2 items-center flex flex-col justify-center">
                 <h1 className="mb-2 md:mb-3 font-array text-2xl">{e.head}</h1>
-                <p className="leading-5 sm:leading-6 font-instagram text-lg">{e.content}</p>
+                <p className="leading-5 sm:leading-6 font-instagram text-lg">
+                  {e.content}
+                </p>
               </div>
             </div>
           </li>

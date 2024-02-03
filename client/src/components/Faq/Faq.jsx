@@ -21,7 +21,11 @@ const Faq = () => {
   };
   return (
     <div>
-      <div className="mb-10 w-fit mx-auto">
+      <div
+        data-aos="fade-up"
+        data-aos-once="true"
+        className="mb-10 w-fit mx-auto"
+      >
         <h1 className="font-pricedown text-white text-7xl items-center">FAQ</h1>
       </div>
       <div>
