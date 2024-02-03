@@ -7,6 +7,7 @@ import Git from "../../assets/githublogo.png";
 import { Link } from "react-router-dom";
 import SocialIcon from "./SocialIcon";
 import GameCodexRect from "../../assets/GameCodexRect.png";
+import {motion} from "framer-motion"
 
 const GameCodex = () => {
   return (
@@ -36,13 +37,24 @@ const GameCodex = () => {
           tech-driven world.
         </p>
       </div>
-      <div className="flex lg:-mt-10 lg:-ml-[40rem]  gap-3 mt-8 lg:flex-row flex-col ">
+      <motion.div 
+        initial={{
+          scale: 10,
+          opacity: 0,
+        }}
+        whileInView={{
+          scale: 1,
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      className="flex lg:-mt-10 lg:-ml-[40rem]  gap-3 mt-8 lg:flex-row flex-col ">
         <SocialIcon
           url="https://www.instagram.com/gamecodex_lnm/?img_index=1"
           image={Insta}
           text="Instagram"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

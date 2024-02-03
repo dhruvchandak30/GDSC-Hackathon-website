@@ -12,10 +12,11 @@ const Faq = () => {
     false,
     false,
     false,
+    false,
   ]);
 
   const handleFaq = (e) => {
-    const temp = [false, false, false, false, false];
+    const temp = [false, false, false, false, false, false];
     if (toggleFaq[e] !== true) temp[e] = true;
     setToggleFaq(temp);
   };
@@ -31,6 +32,11 @@ const Faq = () => {
       <div>
         {data.map((e) => (
           <motion.div
+            initial={{ height: 0 }}
+            animate={{
+              height: "fit-content",
+            }}
+            transition={{ duration: 0.4 }}
             onClick={() => handleFaq(data.indexOf(e))}
             key={data.indexOf(e)}
             className={` cursor-pointer sm:w-[80%] w-[95%] mx-auto px-6 py-2 border-2 border-white rounded-lg mb-6 font-instagram text-xl ${
@@ -50,13 +56,19 @@ const Faq = () => {
                 // onClick={() => handleFaq(data.indexOf(e))}
               />
             </div>
-            <p
+            <motion.p
+              initial={{ y: -50, opacity: 0 }}
+              animate={{
+                y: toggleFaq[data.indexOf(e)] ? 0 : -50,
+                opacity: toggleFaq[data.indexOf(e)] ? 1 : 0,
+              }}
+              transition={{ duration: 0.2, delay: 0.2 }}
               className={`text-white mt-2 ${
                 toggleFaq[data.indexOf(e)] ? "block" : "hidden"
               }`}
             >
               {e.answer}
-            </p>
+            </motion.p>
           </motion.div>
         ))}
       </div>
