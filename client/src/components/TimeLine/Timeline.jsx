@@ -38,7 +38,7 @@ const Timeline = () => {
     };
   }, []);
   return (
-    <div className={` timeline w-full px-6 sm:px-12 md:px-16  py-20`}>
+    <div id="TimeLineid" className={` timeline w-full px-6 sm:px-12 md:px-16  py-20`}>
      <div className="flex items-center justify-center my-16">
         <img src={time} alt="About Us"></img>
       </div>

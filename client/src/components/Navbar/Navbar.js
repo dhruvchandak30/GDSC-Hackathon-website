@@ -14,6 +14,19 @@ const Navbar = () => {
   const hoverOut = () => {
     setBg([false, false, false, false]);
   };
+  const scrollAboutUs = () => {
+    var elem = document.getElementById("AboutUsid");
+    elem.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollTimeLine = () => {
+    var elem = document.getElementById("TimeLineid");
+    elem.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollPS = () => {
+    var elem = document.getElementById("PSId");
+    elem.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div>
@@ -23,7 +36,9 @@ const Navbar = () => {
         </div>
         <ul className="flex gap-x-6 ">
           <li
-            className={`text-center w-fit px-8 h-[30px]  ${bg[0] ? "back" : ""}`}
+            className={`text-center w-fit px-8 h-[30px]  ${
+              bg[0] ? "back" : ""
+            }`}
             onMouseEnter={() => hoverHandler(0)}
             onMouseLeave={hoverOut}
           >
@@ -32,6 +47,7 @@ const Navbar = () => {
             </h5>
           </li>
           <li
+            onClick={scrollAboutUs}
             className={`text-center px-6 h-[30px]  ${bg[1] ? "back" : ""}`}
             onMouseEnter={() => hoverHandler(1)}
             onMouseLeave={hoverOut}
@@ -39,6 +55,7 @@ const Navbar = () => {
             <h5 className="text-[#FFFFFF] heading cursor-pointer">About Us</h5>
           </li>
           <li
+            onClick={scrollTimeLine}
             className={`text-center px-6  h-[30px]  ${bg[2] ? "back" : ""}`}
             onMouseEnter={() => hoverHandler(2)}
             onMouseLeave={hoverOut}
@@ -46,7 +63,10 @@ const Navbar = () => {
             <h5 className="text-[#FFFFFF] heading cursor-pointer">Timeline</h5>
           </li>
           <li
-            className={`text-center w-fit px-4 ps-6 h-[30px] ${bg[3] ? "back" : ""}`}
+            onClick={scrollPS}
+            className={`text-center w-fit px-4 ps-6 h-[30px] ${
+              bg[3] ? "back" : ""
+            }`}
             onMouseEnter={() => hoverHandler(3)}
             onMouseLeave={hoverOut}
           >
