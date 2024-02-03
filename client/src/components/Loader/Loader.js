@@ -51,9 +51,9 @@ const Preloader = () => {
   }, []);
 
   return (
-    <div className={LoaderCss.preloader}>
-      <div className={LoaderCss.heading} ref={headingRef}>
-        <h1>
+    <div className={`${LoaderCss.preloader}`}>
+      <div className={`${LoaderCss.heading}`} ref={headingRef}>
+        <h1 className="text-white font-bold text-4xl">
           <span style={{ color: "#DB3236" }}>G</span>oogle
           <span style={{ color: "#3CBA54" }}> D</span>eveloper
           <span style={{ color: "#4885ED" }}> S</span>tudent

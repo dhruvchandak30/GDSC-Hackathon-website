@@ -21,17 +21,17 @@ function App() {
     }, 3000);
   }, []);
   return (
-    <>
-      {/* {isLoading ? (
+    <div className="">
+      {isLoading ? (
         <Preloader />
-      ) : ( */}
+      ) : (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
-      {/* )} */}
-    </>
+       )}
+    </div>
   );
 }
 
