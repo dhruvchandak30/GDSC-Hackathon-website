@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import AryanEvents from "../../assets/AryanEvents.png";
+import HackathonImage from "../../assets/HackathonImage.jpg";
+import Talk from "../../assets/Talk.jpg";
+import CP from "../../assets/CP.jpg";
 import EventTitleCard from "./EventTitleCard";
 import "./Event.css";
 import EventDescCard from "./EventDescCard";
@@ -13,17 +16,17 @@ const EventData = [
   {
     title: "Hackathon",
     text: "An exciting platform for all the game developers out there to showcase their game development skills on the basis of the problem statement which will be provided to them along with the release of the problem statement for the hackathon.",
-    img: AryanEvents,
+    img: HackathonImage,
   },
   {
     title: "Talk",
     text: "GameCodeX isn’t all about those coding and development stuff. Well-renowned speakers will take up the stage to share valuable insights and throw lights on what’s going on in this tech-driven world. ",
-    img: AryanEvents,
+    img: Talk,
   },
   {
     title: "CP",
     text: "GameCodeX gives you a chance to display your programming skills with a coding contest lined up on the same day. The problem statements shall be provided, and you need to step up to prove your mettle against your worthy competitors and emerge victorious amongst all.",
-    img: AryanEvents,
+    img: CP,
   },
 ];
 
@@ -57,12 +60,12 @@ const Event = () => {
   };
 
   return (
-    <div className="my-16">
+    <div id="EventID" className="my-16 flex flex-col justify-center items-center">
       <div className="flex justify-center align-middle py-16">
         <h1 className="font-pricedown text-7xl text-white">Events</h1>
       </div>
 
-      <div className="flex lg:flex-row flex-col lg:justify-center">
+      <div className="flex lg:flex-row flex-col lg:justify-center ">
         <div className="flex lg:flex-col flex-wrap p-4 gap-4 justify-evenly">
           <EventTitleCard
             onClick={() => ChangeEventHandler("Code Jam")}
@@ -95,7 +98,7 @@ const Event = () => {
             <img
               src={events.img}
               id="EventImagee"
-              className="items-center flex justify-between"
+              className="items-center flex p-4 -skew-x-6 justify-between w-[35rem]"
               alt="Events"
               style={{
                 filter: !EventImageVisibility

@@ -3,7 +3,7 @@ import AboutUsImage from "../../assets/AboutUsImage.png";
 
 const AboutUs = () => {
   return (
-    <div className="">
+    <div className="" id="AboutUsid">
       <div className="flex items-center justify-center my-16">
         <h1 className="font-pricedown text-white text-7xl  AboutUs">
           About Us

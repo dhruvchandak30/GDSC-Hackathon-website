@@ -32,18 +32,12 @@ const GameCodex = () => {
           tech-driven world.
         </p>
       </div>
-      <div className="flex lg:-mt-10 lg:mr-64 gap-3 mt-8 lg:flex-row flex-col items-center justify-center">
+      <div className="flex lg:-mt-10 lg:-ml-[40rem]  gap-3 mt-8 lg:flex-row flex-col ">
         <SocialIcon
           url="https://www.instagram.com/gamecodex_lnm/?img_index=1"
           image={Insta}
           text="Instagram"
         />
-        <SocialIcon
-          url="https://github.com/dhruvchandak30"
-          image={Git}
-          text="Github"
-        />
-        <SocialIcon url="https://twitter.com" image={Twitter} text="Twitter" />
       </div>
     </div>
   );

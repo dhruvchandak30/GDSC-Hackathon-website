@@ -4,7 +4,7 @@ import PSData from "./PSData";
 
 const PS = () => {
   return (
-    <div className="my-8">
+    <div className="my-8" id="PSId">
       <div className="font-pricedown text-white lg:text-7xl text-6xl text-center my-32">
         Problem Statements
       </div>
@@ -14,10 +14,13 @@ const PS = () => {
             key={item.id}
             img={item.img}
             title={item.title}
-            desc={item.desc}
+            desc="Coming Soon ..."
           />
         ))}
       </div>
+      {/* <div className="font-array text-center text-4xl text-white">
+        Coming Soon ...
+      </div> */}
     </div>
   );
 };
