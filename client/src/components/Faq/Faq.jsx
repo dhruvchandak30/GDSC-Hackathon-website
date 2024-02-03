@@ -12,10 +12,11 @@ const Faq = () => {
     false,
     false,
     false,
+    false,
   ]);
 
   const handleFaq = (e) => {
-    const temp = [false, false, false, false, false];
+    const temp = [false, false, false, false, false, false];
     if (toggleFaq[e] !== true) temp[e] = true;
     setToggleFaq(temp);
   };
@@ -45,13 +46,19 @@ const Faq = () => {
                 onClick={() => handleFaq(data.indexOf(e))}
               />
             </div>
-            <p
+            <motion.p
+              initial={{ y: -50, opacity: 0 }}
+              animate={{
+                y: toggleFaq[data.indexOf(e)] ? 0 : -50,
+                opacity: toggleFaq[data.indexOf(e)] ? 1 : 0,
+              }}
+              transition={{ duration: 0.4 }}
               className={`text-white mt-2 ${
                 toggleFaq[data.indexOf(e)] ? "block" : "hidden"
               }`}
             >
               {e.answer}
-            </p>
+            </motion.p>
           </motion.div>
         ))}
       </div>
