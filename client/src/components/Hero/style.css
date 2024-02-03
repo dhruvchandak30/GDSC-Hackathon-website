@@ -22,11 +22,47 @@
 }
 
 .textborder {
-    text-shadow: -10px -10px 0 black, 0px 0px 0 black, 0px 0px 0 black, 0px 0px 0 black;
+  text-shadow: -10px -10px 0 black, 0px 0px 0 black, 0px 0px 0 black,
+    0px 0px 0 black;
 }
 
-@media (max-width:600px){
-    .textborder {
-        text-shadow: -5px -5px 0 black, 0px 0px 0 black, 0px 0px 0 black, 0px 0px 0 black;
-    }
+.text1 {
+  width: 16ch;
+  border-right: 3px solid;
+  animation: blink 1s step-end infinite, type 2.5s steps(30) forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  animation-iteration-count: 1;
+}
+
+.text2 {
+  width: 10ch;
+  border-right: 3px solid;
+  animation: blink 1s step-end infinite, type 2s steps(30) forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  animation-iteration-count: 1;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  100% {
+    /* width: 100%; Adjust to the final width of the word */
+    border-color: transparent; /* Add this line to hide the border when fully typed */
+  }
+}
+
+@media (max-width: 600px) {
+  .textborder {
+    text-shadow: -5px -5px 0 black, 0px 0px 0 black, 0px 0px 0 black,
+      0px 0px 0 black;
+  }
 }

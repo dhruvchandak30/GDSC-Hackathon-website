@@ -19,7 +19,7 @@ const Footer = () => {
     elem.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="pt-16 pb-4">
+    <div className=" pt-16 pb-4">
       <div className="flex lg:flex-row flex-col justify-evenly">
         <div className="flex items-center  justify-center gap-x-2">
           <div className="text-white">
@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="text-white font-instagram">
             <h1 className="text-3xl font-bold mb-4">Navigate to</h1>
             <ul className="flex flex-col gap-y-2  font-medium text-xl">
-              <li onClick={scrollAboutUs} className="cursor-pointer">
+              <li onClick={scrollAboutUs} className="font-instagramcursor-pointer">
                 About us
               </li>
               <li onClick={scrollEvents} className="cursor-pointer">
