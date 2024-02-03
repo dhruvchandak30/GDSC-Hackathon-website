@@ -13,8 +13,9 @@ import Preloader from "./components/Loader/Loader";
 function App() {
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
+    if(!isLoading)
     AOS.init();
-  }, []);
+  }, [isLoading]);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
