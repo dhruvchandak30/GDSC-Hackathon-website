@@ -20,7 +20,7 @@ const Hero = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsVisible(true);
-    }, 2500);
+    }, 1450);
 
     return () => clearTimeout(timeoutId);
   }, []);

@@ -7,14 +7,14 @@
 .EventContainer:hover + .EventImage {
   filter: brightness(50%);
 }
-.EventImage:hover +.EventImage{
+.EventImage:hover + .EventImage {
   filter: brightness(50%);
 }
 
 .EventImage:hover {
   filter: brightness(50%);
 }
-#EventContainer1{
+#EventContainer1 {
   /* display: none; */
 }
 
@@ -23,8 +23,7 @@
 }
 
 @media (max-width: 768px) {
-  .EventContainer {
-    max-height: 300px;
-    overflow-y: scroll;
+  #EventContainer1 {
+    display: block;
   }
 }

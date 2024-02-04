@@ -61,7 +61,7 @@ const Preloader = () => {
         </h1>
       </div>
       <div className={LoaderCss.subheading} ref={subHeadingRef}>
-        <h3>The LNM Institute of Information Technology</h3>
+        <h3 className="text-white font-bold lg:text-4xl text-xl">The LNM Institute of Information Technology</h3>
       </div>
       <img src={logo} className={LoaderCss.logo} alt="Logo" ref={circlesRef} />
       <div className={`${LoaderCss.circle} ${LoaderCss.circle1}`}></div>
