@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AryanEvents from "../../assets/AryanEvents.jpg";
 import HackathonImage from "../../assets/HackathonImage.jpg";
 import Talk from "../../assets/Talk.jpg";
@@ -33,7 +33,13 @@ const EventData = [
 const Event = () => {
   const [activeCard, setActiveCard] = useState(null);
   const [events, setEventsData] = useState(EventData[1]);
+
   const [EventImageVisibility, setEventImage] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 500) {
+      setEventImage(true);
+    }
+  }, [EventImageVisibility]);
 
   const ChangeEventHandler = (text) => {
     setActiveCard(text);
@@ -74,28 +80,28 @@ const Event = () => {
 
       <div className="flex lg:flex-row flex-col lg:justify-center ">
         <div className="flex lg:flex-col flex-wrap p-4 gap-4 justify-evenly">
-          <div data-aos="fade-right"   data-aos-delay="500"  data-aos-once="true">
+          <div data-aos="fade-right" data-aos-delay="200" data-aos-once="true">
             <EventTitleCard
               onClick={() => ChangeEventHandler("Hackathon")}
               text="Hackathon"
               isActive={activeCard === "Hackathon"}
             />
           </div>
-          <div data-aos="fade-right"   data-aos-delay="500" data-aos-once="true">
+          <div data-aos="fade-right" data-aos-delay="250" data-aos-once="true">
             <EventTitleCard
               onClick={() => ChangeEventHandler("Code Jam")}
               text="Code Jam"
               isActive={activeCard === "Code Jam"}
             />
           </div>
-          <div data-aos="fade-right"   data-aos-delay="500" data-aos-once="true">
+          <div data-aos="fade-right" data-aos-delay="300" data-aos-once="true">
             <EventTitleCard
               onClick={() => ChangeEventHandler("Talk")}
               text="Talk"
               isActive={activeCard === "Talk"}
             />
           </div>
-          <div data-aos="fade-right"   data-aos-delay="500" data-aos-once="true">
+          <div data-aos="fade-right" data-aos-delay="350" data-aos-once="true">
             <EventTitleCard
               onClick={() => ChangeEventHandler("CP")}
               text="CP"
@@ -113,7 +119,7 @@ const Event = () => {
             <img
               src={events.img}
               id="EventImagee"
-              className="items-center flex p-4 -skew-x-6 justify-between w-[35rem]"
+              className="items-center flex p-4 lg:-skew-x-6 justify-between w-[35rem] lg:h-[25rem]"
               alt="Events"
               style={{
                 filter: !EventImageVisibility

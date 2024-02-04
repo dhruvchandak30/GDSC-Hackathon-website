@@ -29,7 +29,7 @@
 .text1 {
   width: 16ch;
   border-right: 3px solid;
-  animation: blink 1s step-end infinite, type 2.5s steps(30) forwards;
+  animation: blink 1s step-end infinite, type 1.5s steps(30) forwards;
   overflow: hidden;
   white-space: nowrap;
   animation-iteration-count: 1;
@@ -38,7 +38,7 @@
 .text2 {
   width: 10ch;
   border-right: 3px solid;
-  animation: blink 1s step-end infinite, type 2s steps(30) forwards;
+  animation: blink 1s step-end infinite, type 1s steps(30) forwards;
   overflow: hidden;
   white-space: nowrap;
   animation-iteration-count: 1;
