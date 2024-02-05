@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 22500);
+    }, 3000);
   }, []);
   return (
     <div className="">
