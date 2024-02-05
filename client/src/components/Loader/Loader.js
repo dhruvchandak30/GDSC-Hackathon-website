@@ -51,19 +51,35 @@ const Preloader = () => {
   }, []);
 
   return (
-    <div className={`${LoaderCss.preloader}`}>
-      <div className={`${LoaderCss.heading}`} ref={headingRef}>
-        <h1 className="text-white font-bold text-4xl">
-          <span style={{ color: "#DB3236" }}>G</span>oogle
-          <span style={{ color: "#3CBA54" }}> D</span>eveloper
-          <span style={{ color: "#4885ED" }}> S</span>tudent
-          <span style={{ color: "#F4C20D" }}> C</span>lubs
-        </h1>
+    <div className={`${LoaderCss.preloader} items-center justify-center`}>
+      <div className="flex lg:flex-row flex-col items-center justify-center">
+        <div className="lg:mx-16 items-center justify-center">
+          <img
+            src={logo}
+            className={`${LoaderCss.logo} items-center justify-center`}
+            alt="Logo"
+            ref={circlesRef}
+          />
+        </div>
+        <div className="flex flex-col ">
+          <div
+            className={`${LoaderCss.heading} flex text-center lg:text-left`}
+            ref={headingRef}
+          >
+            <h1 className="text-white font-bold text-4xl">
+              <span style={{ color: "#DB3236" }}>G</span>oogle
+              <span style={{ color: "#3CBA54" }}> D</span>eveloper
+              <span style={{ color: "#4885ED" }}> S</span>tudent
+              <span style={{ color: "#F4C20D" }}> C</span>lubs
+            </h1>
+          </div>
+          <div className={LoaderCss.subheading} ref={subHeadingRef}>
+            <h3 className="text-white text-center font-bold lg:text-4xl text-xl mt-4">
+              The LNM Institute of Information Technology
+            </h3>
+          </div>
+        </div>
       </div>
-      <div className={LoaderCss.subheading} ref={subHeadingRef}>
-        <h3 className="text-white font-bold lg:text-4xl text-xl">The LNM Institute of Information Technology</h3>
-      </div>
-      <img src={logo} className={LoaderCss.logo} alt="Logo" ref={circlesRef} />
       <div className={`${LoaderCss.circle} ${LoaderCss.circle1}`}></div>
       <div className={`${LoaderCss.circle} ${LoaderCss.circle2}`}></div>
       <div className={`${LoaderCss.circle} ${LoaderCss.circle3}`}></div>
