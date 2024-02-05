@@ -21,6 +21,7 @@
   background-color: black;
   width: 100vw;
   overflow: hidden;
+  overflow-x: hidden;
 
   /* Add more styles as needed */
 }
@@ -28,24 +29,8 @@
 .logo {
   width: 100px;
   height: 100px;
-  top: 30%;
-  left: 30%;
-  position: absolute;
-  /* background: linear-gradient(45deg, rgba(255, 255, 255, 0.6) 0%, transparent 50%, rgba(255, 255, 255, 0.6) 100%); */
   z-index: 1;
   pointer-events: none;
-}
-
-.heading {
-  top: 26%;
-  left: 40%;
-  position: absolute;
-}
-
-.subheading {
-  top: 35%;
-  left: 40%;
-  position: absolute;
 }
 
 .circle {
@@ -53,7 +38,7 @@
   padding-top: 2.5%;
   height: 0%;
   border-radius: 50%;
-  top: 60%;
+  top: 65%;
   left: 50%;
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
@@ -111,36 +96,9 @@
   }
 }
 
-@media (max-width: 1110px) {
-  .logo {
-    top: 30%;
-    left: 5%;
-  }
-  .heading {
-    font-size: 1rem;
-    top: 30%;
-    left: 35%;
-  }
-
-  .subheading {
-    /* display: none; */
-    top: 50%;
-    left: 10%;
-    text-align: center;
-    font-size: 1rem;
-  }
-}
 
 @media (max-width: 675px) {
-  .logo {
-    /* display: none; */
-  }
-
-  .heading {
-    /* display: none; */
-  }
-
   .circle {
-    top: 70%;
+    top: 80%;
   }
 }
