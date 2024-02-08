@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import "./timeline.css";
 import data from "../data/data";
 import time from "../../assets/timeline.svg";
+import { motion } from "framer-motion";
 
 const Timeline = () => {
   useEffect(() => {
@@ -42,14 +43,24 @@ const Timeline = () => {
       id="TimeLineid"
       className={` timeline w-full px-6 sm:px-12 md:px-16  py-20`}
     >
-      <div
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-delay="500"
+      <motion.div
+           initial={{
+            opacity: 0,
+  
+            y: 150,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1, // Animation duration
+            },
+          }}
+          viewport={{ once: true }}
         className="flex  text-white font-pricedown lg:text-7xl text-6xl items-center justify-center my-16"
       >
         Timeline
-      </div>
+      </motion.div>
       <ul>
         {data.map((e, ind) => (
           <li key={ind}>

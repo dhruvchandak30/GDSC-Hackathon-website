@@ -22,13 +22,24 @@ const Faq = () => {
   };
   return (
     <div>
-      <div
-        data-aos="fade-up"
-        data-aos-once="true"
+      <motion.div
+        initial={{
+          opacity: 0,
+
+          y: 150,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 1, // Animation duration
+          },
+        }}
+        viewport={{ once: true }}
         className="mb-10 w-fit mx-auto"
       >
         <h1 className="font-pricedown text-white text-7xl items-center">FAQ</h1>
-      </div>
+      </motion.div>
       <div>
         {data.map((e) => (
           <motion.div
@@ -43,10 +54,20 @@ const Faq = () => {
               toggleFaq[data.indexOf(e)] ? "bg-[#9D3E47]" : "bg-transparent"
             } `}
           >
-            <div
-              data-aos="fade-right"
-              data-aos-once="true"
-              data-aos-delay="500"
+            <motion.div
+              initial={{
+                opacity: 0,
+
+                x: -150,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  duration: 1, // Animation duration
+                },
+              }}
+              viewport={{ once: true }}
               className="flex justify-between"
             >
               {" "}
@@ -60,7 +81,7 @@ const Faq = () => {
                 size={35}
                 // onClick={() => handleFaq(data.indexOf(e))}
               />
-            </div>
+            </motion.div>
             <motion.p
               initial={{ y: -50, opacity: 0 }}
               animate={{
