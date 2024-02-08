@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const PSCard = ({ img, title, desc }) => {
   return (
@@ -12,16 +13,28 @@ const PSCard = ({ img, title, desc }) => {
         className="w-[15rem] cursor-pointer"
         alt={title}
       />
-      <div
-        data-aos="zoom-in"
-        data-aos-once="true"
-        className="w-[15rem] flex flex-col"
+      <motion.div
+        className=""
+        initial={{
+          opacity: 0,
+          y: 50,
+          z: 350,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          z: 0,
+          transition: {
+            duration: 1.5, // Animation duration
+          },
+        }}
+        viewport={{ once: true }}
       >
         <h1 className="font-array text-3xl text-[#F27DFD]">{title}</h1>
         <div className="">
           <p className=" h-max">{desc}</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
