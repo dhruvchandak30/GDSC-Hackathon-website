@@ -31,3 +31,9 @@ svg {
   /* background-position:center; */
   background-image: url("../../assets/SocialBG.png");
 }
+
+.sixImage {
+  background-image: url("../../assets/six.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}

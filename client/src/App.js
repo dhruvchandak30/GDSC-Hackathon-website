@@ -9,29 +9,30 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Preloader from "./components/Loader/Loader";
+import GameJam from "./components/GameJam/GameJam";
 
 function App() {
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    if(!isLoading)
-    AOS.init();
+    if (!isLoading) AOS.init();
   }, [isLoading]);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 30);
   }, []);
   return (
     <div className="">
       {isLoading ? (
         <Preloader />
       ) : (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-       )}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/gamejam" element={<GameJam />} />
+          </Routes>
+        </BrowserRouter>
+      )}
     </div>
   );
 }

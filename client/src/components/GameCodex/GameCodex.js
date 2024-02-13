@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import SocialIcon from "./SocialIcon";
 import GameCodexRect from "../../assets/GameCodexRect.png";
 import { motion } from "framer-motion";
+import linkedin from "../../assets/lin.png";
 
 const GameCodex = () => {
   return (
@@ -36,7 +37,7 @@ const GameCodex = () => {
             },
           }}
           viewport={{ once: true }}
-          className="absolute text-white lg:bottom-32 lg:left-[25%] lg:w-1/2  text-center flex lg:justify-center lg:items-center top-16 lg:text-[18px] text-[11px] py-2 lg:px-8 px-12"
+          className="absolute text-white lg:bottom-32 lg:left-[25%] lg:w-1/2 md:w-2/3  text-center flex lg:justify-center lg:items-center top-16 lg:text-[18px] text-[11px] py-2 lg:px-8 px-12"
         >
           GDSC LNMIIT presents GameCodeX, the highly anticipated hackathon for
           tech enthusiasts. Themed around GTA 6, this event offers a unique
@@ -58,12 +59,22 @@ const GameCodex = () => {
         }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="flex lg:-mt-10 lg:-ml-[40rem]  gap-3 mt-8 lg:flex-row flex-col "
+        className="flex lg:-mt-10 lg:-ml-[20rem]  gap-3 mt-8 lg:flex-row flex-col "
       >
         <SocialIcon
           url="https://www.instagram.com/gamecodex_lnm/?img_index=1"
           image={Insta}
           text="Instagram"
+        />
+        <SocialIcon
+          url="https://in.linkedin.com/company/gdsc-lnmiit-jaipur"
+          image={linkedin}
+          text="LinkedIn"
+        />
+        <SocialIcon
+          url="https://in.linkedin.com/company/gdsc-lnmiit-jaipur"
+          image={Insta}
+          text="Game Codex"
         />
       </motion.div>
     </div>
