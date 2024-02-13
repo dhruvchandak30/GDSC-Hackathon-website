@@ -8,7 +8,7 @@ const SocialIcon = ({ image, url, text }) => {
     <div className="SocialBG bg-cover bg-center w-[13rem] h-max p-2">
       <Link to={url}>
         <div className="text-black font-array text-center ml-12 items-center m-2 gap-3   flex flex-row">
-          <img alt={text} src={image}></img>
+          <img alt={text} className="w-[1rem]" src={image}></img>
           <h1>{text}</h1>
         </div>
       </Link>

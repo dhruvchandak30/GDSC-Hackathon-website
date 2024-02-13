@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const EventData = [
   {
-    title: "Code Jam",
+    title: "Game Jam",
     text: "An exciting platform for all the game developers out there to showcase their game development skills on the basis of the problem statement which will be provided to them along with the release of the problem statement for the hackathon.",
     img: AryanEvents,
   },
@@ -132,7 +132,7 @@ const Event = () => {
           >
             <EventTitleCard
               onClick={() => ChangeEventHandler("Code Jam")}
-              text="Code Jam"
+              text="Game Jam"
               isActive={activeCard === "Code Jam"}
             />
           </motion.div>
