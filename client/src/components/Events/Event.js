@@ -6,6 +6,7 @@ import CP from "../../assets/CP.jpg";
 import EventTitleCard from "./EventTitleCard";
 import "./Event.css";
 import EventDescCard from "./EventDescCard";
+import { motion } from "framer-motion";
 
 const EventData = [
   {
@@ -70,44 +71,115 @@ const Event = () => {
       id="EventID"
       className="my-16 flex flex-col justify-center items-center"
     >
-      <div
-        data-aos="fade-up"
-        data-aos-once="true"
+      <motion.div
         className="flex justify-center align-middle py-16"
+        initial={{
+          opacity: 0,
+
+          y: 150,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 1, // Animation duration
+          },
+        }}
+        viewport={{ once: true }}
       >
         <h1 className="font-pricedown text-7xl text-white">Events</h1>
-      </div>
+      </motion.div>
 
       <div className="flex lg:flex-row flex-col lg:justify-center ">
         <div className="flex lg:flex-col flex-wrap p-4 gap-4 justify-evenly">
-          <div data-aos="fade-right" data-aos-delay="200" data-aos-once="true">
+          <motion.div
+            className="card"
+            initial={{
+              opacity: 0,
+
+              x: -350,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0, // Slide in to its original position
+              transition: {
+                duration: 1.5, // Animation duration
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <EventTitleCard
               onClick={() => ChangeEventHandler("Hackathon")}
               text="Hackathon"
               isActive={activeCard === "Hackathon"}
             />
-          </div>
-          <div data-aos="fade-right" data-aos-delay="250" data-aos-once="true">
+          </motion.div>
+          <motion.div
+            className="card"
+            initial={{
+              opacity: 0,
+
+              x: -350,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0, // Slide in to its original position
+              transition: {
+                duration: 1.5, // Animation duration
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <EventTitleCard
               onClick={() => ChangeEventHandler("Code Jam")}
               text="Code Jam"
               isActive={activeCard === "Code Jam"}
             />
-          </div>
-          <div data-aos="fade-right" data-aos-delay="300" data-aos-once="true">
+          </motion.div>
+          <motion.div
+            className="card"
+            initial={{
+              opacity: 0,
+
+              x: -350,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0, // Slide in to its original position
+              transition: {
+                duration: 1.5, // Animation duration
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <EventTitleCard
               onClick={() => ChangeEventHandler("Talk")}
               text="Talk"
               isActive={activeCard === "Talk"}
             />
-          </div>
-          <div data-aos="fade-right" data-aos-delay="350" data-aos-once="true">
+          </motion.div>
+          <motion.div
+            className="card"
+            initial={{
+              opacity: 0,
+
+              x: -350,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0, // Slide in to its original position
+              transition: {
+                duration: 1.5, // Animation duration
+              },
+            }}
+            viewport={{ once: true }}
+          >
             <EventTitleCard
               onClick={() => ChangeEventHandler("CP")}
               text="CP"
               isActive={activeCard === "CP"}
             />
-          </div>
+          </motion.div>
         </div>
 
         <div className="flex items-center relative">

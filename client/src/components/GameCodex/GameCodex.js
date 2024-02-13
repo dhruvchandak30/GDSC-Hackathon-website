@@ -7,7 +7,7 @@ import Git from "../../assets/githublogo.png";
 import { Link } from "react-router-dom";
 import SocialIcon from "./SocialIcon";
 import GameCodexRect from "../../assets/GameCodexRect.png";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
 const GameCodex = () => {
   return (
@@ -23,10 +23,19 @@ const GameCodex = () => {
           alt=""
           className="w-full lg:h-full h-[10rem]"
         ></img>
-        <p
-          data-aos="zoom-in-up"
-          data-aos-once="true"
-          data-aos-delay="500"
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 100,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1, // Animation duration
+            },
+          }}
+          viewport={{ once: true }}
           className="absolute text-white lg:bottom-32 lg:left-[25%] lg:w-1/2  text-center flex lg:justify-center lg:items-center top-16 lg:text-[18px] text-[11px] py-2 lg:px-8 px-12"
         >
           GDSC LNMIIT presents GameCodeX, the highly anticipated hackathon for
@@ -36,9 +45,9 @@ const GameCodex = () => {
           discovery, learning, and triumph. GameCodeX is not just about coding;
           well renowned speakers will share their valuable insights on the
           tech-driven world.
-        </p>
+        </motion.div>
       </div>
-      <motion.div 
+      <motion.div
         initial={{
           scale: 10,
           opacity: 0,
@@ -49,7 +58,8 @@ const GameCodex = () => {
         }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-      className="flex lg:-mt-10 lg:-ml-[40rem]  gap-3 mt-8 lg:flex-row flex-col ">
+        className="flex lg:-mt-10 lg:-ml-[40rem]  gap-3 mt-8 lg:flex-row flex-col "
+      >
         <SocialIcon
           url="https://www.instagram.com/gamecodex_lnm/?img_index=1"
           image={Insta}
