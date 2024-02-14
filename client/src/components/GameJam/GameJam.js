@@ -22,14 +22,14 @@ const GameJam = () => {
     navigate("/");
   };
   return (
-    <div className="bg-black h-screen  text-white">
+    <div className="bg-black   text-white">
       <div className="sixImage lg:h-full lg:w-full">
         <div className="">{status ? <HamburgerNavbar /> : <Navbar />}</div>
-        <div className=" flex lg:flex-row flex-col lg:mt-40 items-center lg:justify-around">
+        <div className=" flex lg:flex-row flex-col lg:mt-40  items-center lg:justify-around ml-32">
           <div></div>
-          <div className="">
+          <div className="lg:mt-0 ">
             <div>
-              <h3 className="font-instagram font-bold lg:text-2xl">
+              <h3 className="font-instagram font-bold lg:text-2xl lg:w-full w-[10rem]">
                 GDSC LNMIIT X PRESIDENTIAL COUNCIL LNMIIT PRESENTS
               </h3>
               <h1 className="font-pricedown lg:text-9xl text-4xl lg:text-right text-center ">
@@ -47,8 +47,8 @@ const GameJam = () => {
           </div>
         </div>
       </div>
-      <div className="flex  bg-black  items-center relative flex-col ">
-        <div className="flex lg:mr-[45rem] lg:-top-7 lg:absolute sm:text-center">
+      <div className="flex  bg-black pt-16  items-center relative flex-col ">
+        <div className="flex lg:mr-[45rem] lg:top-10 lg:absolute sm:text-center">
           <h1 className="text-white font-array font-array  lg:text-5xl text-3xl mb-4">
             Rules and Regulations
           </h1>
@@ -72,7 +72,7 @@ const GameJam = () => {
               },
             }}
             viewport={{ once: true }}
-            className="absolute text-white lg:bottom-[4rem] lg:left-[25%] lg:w-1/2 md:w-2/3  text-center flex lg:justify-center lg:items-center top-16 lg:text-[18px] text-[11px] py-2 lg:px-8 px-12"
+            className="absolute text-white lg:bottom-[2rem] lg:left-[25%] lg:w-1/2 md:w-2/3  text-center flex lg:justify-center lg:items-center top-32 lg:text-[18px] text-[11px] py-2 lg:px-8 px-12"
           >
             Get ready to level up your creativity with our game jam theme: 'Game
             within a game'! Ever wanted to dive into a virtual world where every
