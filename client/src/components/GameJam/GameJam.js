@@ -27,7 +27,7 @@ const GameJam = () => {
           <div className="lg:mt-0 ">
             <div>
               <h3 className="font-instagram font-bold lg:text-2xl lg:w-full w-[10rem]">
-                GDSC LNMIIT X PRESIDENTIAL COUNCIL LNMIIT PRESENTS
+                GDSC LNMIIT PRESENTS
               </h3>
               <h1 className="font-pricedown lg:text-9xl text-5xl lg:text-right text-center ">
                 GAMEJAM
@@ -53,7 +53,7 @@ const GameJam = () => {
           <img
             src={GameCodexRect}
             alt=""
-            className="w-full lg:h-full h-[18rem]"
+            className="w-full lg:h-full h-[7rem]"
           ></img>
           <motion.div
             initial={{
@@ -68,9 +68,9 @@ const GameJam = () => {
               },
             }}
             viewport={{ once: true }}
-            className="absolute text-white lg:bottom-[2rem] lg:left-[25%] lg:w-1/2 md:w-2/3   text-center flex lg:justify-center lg:items-center top-32 lg:text-[18px] text-[13px] py-2 lg:px-8 px-12 font-instagram"
+            className="absolute text-white lg:bottom-[2rem] lg:left-[25%] left-16 lg:w-1/2 md:w-2/3   text-center flex lg:justify-center lg:items-center top-32 lg:text-[35px] text-[25px] py-2 lg:px-8 px-12 font-instagram"
           >
-            Get ready to level up your creativity with our game jam theme: 'Game
+            {/* Get ready to level up your creativity with our game jam theme: 'Game
             within a game'! Ever wanted to dive into a virtual world where every
             move unfolds a new game within the game? Picture yourself navigating
             a maze while solving Sudoku puzzles, or battling dragons in a game
@@ -81,7 +81,8 @@ const GameJam = () => {
             explore uncharted territories, challenge conventions, and redefine
             the gaming experience. Let your imagination run wild and surprise us
             with the ultimate gameception. We can't wait to see what you come up
-            with!
+            with! */}
+            Coming Soon...
           </motion.div>
         </div>
       </div>
