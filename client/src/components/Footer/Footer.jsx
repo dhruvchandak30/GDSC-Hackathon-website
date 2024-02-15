@@ -36,13 +36,13 @@ const Footer = () => {
           <div className="text-white font-instagram">
             <h1 className="lg:text-3xl text-2xl font-bold mb-4">Navigate to</h1>
             <ul className="flex flex-col gap-y-2  font-medium text-xl">
-              <li onClick={scrollAboutUs} className="font-instagramcursor-pointer">
+              <li onClick={scrollAboutUs} className="font-instagram cursor-pointer">
                 About us
               </li>
-              <li onClick={scrollEvents} className="cursor-pointer">
+              <li onClick={scrollEvents} className="font-instagram cursor-pointer">
                 Events
               </li>
-              <li onClick={scrollPS} className="cursor-pointer">
+              <li onClick={scrollPS} className="font-instagram cursor-pointer">
                 Problem Statements
               </li>
             </ul>
