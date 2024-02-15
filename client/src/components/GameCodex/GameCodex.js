@@ -37,7 +37,7 @@ const GameCodex = () => {
             },
           }}
           viewport={{ once: true }}
-          className="absolute text-white lg:bottom-32 lg:left-[25%] lg:w-1/2 md:w-2/3  text-center flex lg:justify-center lg:items-center top-16 lg:text-[18px] text-[11px] py-2 lg:px-8 px-12 font-instagram"
+          className="absolute text-white lg:bottom-32 lg:left-[25%] lg:w-1/2 md:w-2/3 sm:w-1/2  text-center flex lg:justify-center lg:items-center top-16 lg:text-[18px] text-[11px] py-2 lg:px-8 px-12 font-instagram"
         >
           GDSC LNMIIT presents GameCodeX, the highly anticipated hackathon for
           tech enthusiasts. Themed around GTA 6, this event offers a unique
