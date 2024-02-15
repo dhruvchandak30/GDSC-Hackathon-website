@@ -4,24 +4,46 @@ import logo from "../../assets/logo.svg";
 import hambuger from "../../assets/Hamberger.svg";
 import { motion } from "framer-motion";
 import { RxCross2 } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const HamburgerNavbar = () => {
-  const [bg, setBg] = useState([false, false, false, false]);
+  const nav = useNavigate();
+  const [bg, setBg] = useState([false, false, false, false,false]);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const hoverHandler = (e) => {
-    const temp = [false, false, false, false];
-    temp[e] = true;
-    setBg(temp);
+  const goToHome = () => {
+    nav("/");
+    return true;
   };
 
-  const hoverOut = () => {
-    setBg([false, false, false, false]);
+  const scrollAboutUs = async () => {
+    setMenuOpen(false)
+    const response = await goToHome();
+    if (response) {
+      var elem = document.getElementById("AboutUsid");
+      elem.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const scrollTimeLine = async () => {
+    setMenuOpen(false)
+    const response = await goToHome();
+    if (response) {
+      var elem = document.getElementById("TimeLineid");
+      elem.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollPS = async () => {
+    setMenuOpen(false)
+    const response = await goToHome();
+    if (response) {
+      var elem = document.getElementById("PSId");
+      elem.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -48,7 +70,8 @@ const HamburgerNavbar = () => {
             <div className="flex flex-col gap-y-4 justify-center items-center">
               <li
                 className={`text-center sm:w-[50%] w-[90%] bg-black py-2 px-6 list-none`}
-                onClick={() => setMenuOpen(false)}
+                onClick={() => {setMenuOpen(false)
+                nav("/")}}
               >
                 <h5 className="text-[#FFFFFF] heading cursor-pointer w-full">
                   Home
@@ -56,7 +79,16 @@ const HamburgerNavbar = () => {
               </li>
               <li
                 className={`text-center sm:w-[50%] w-[90%]  bg-black py-2 px-6 list-none`}
-                onClick={() => setMenuOpen(false)}
+                onClick={() => {setMenuOpen(false)
+                nav("/gamejam")}}
+              >
+                <h5 className="text-[#FFFFFF] heading cursor-pointer">
+                  GameJam
+                </h5>
+              </li>
+              <li
+                className={`text-center sm:w-[50%] w-[90%]  bg-black py-2 px-6 list-none`}
+                onClick={scrollAboutUs}
               >
                 <h5 className="text-[#FFFFFF] heading cursor-pointer">
                   About Us
@@ -64,19 +96,19 @@ const HamburgerNavbar = () => {
               </li>
               <li
                 className={`text-center sm:w-[50%] w-[90%] bg-black py-2 px-6 list-none`}
-                onClick={() => setMenuOpen(false)}
-              >
+                onClick={scrollTimeLine}
+                >
                 <h5 className="text-[#FFFFFF] heading cursor-pointer">
                   Timeline
                 </h5>
               </li>
               <li
                 className={`text-center sm:w-[50%] w-[90%]  bg-black py-2 px-6 list-none`}
-                onClick={() => setMenuOpen(false)}
-              >
+                onClick={scrollPS}
+                >
                 <Link to="/gamejam">
                   <h5 className="text-[#FFFFFF] heading cursor-pointer">
-                    Game Jam
+                    Problem Statements
                   </h5>
                 </Link>
               </li>
