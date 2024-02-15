@@ -4,6 +4,7 @@ import logo from "../../assets/logo.svg";
 import hambuger from "../../assets/Hamberger.svg";
 import { motion } from "framer-motion";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 const HamburgerNavbar = () => {
   const [bg, setBg] = useState([false, false, false, false]);
@@ -73,9 +74,11 @@ const HamburgerNavbar = () => {
                 className={`text-center sm:w-[50%] w-[90%]  bg-black py-2 px-6 list-none`}
                 onClick={() => setMenuOpen(false)}
               >
-                <h5 className="text-[#FFFFFF] heading cursor-pointer">
-                  Problem Statements
-                </h5>
+                <Link to="/gamejam">
+                  <h5 className="text-[#FFFFFF] heading cursor-pointer">
+                    Game Jam
+                  </h5>
+                </Link>
               </li>
             </div>
           </div>

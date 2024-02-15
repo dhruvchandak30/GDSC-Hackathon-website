@@ -32,7 +32,7 @@ const PSCard = ({ img, title, desc }) => {
       >
         <h1 className="font-array text-3xl text-[#F27DFD]">{title}</h1>
         <div className="">
-          <p className=" h-max">{desc}</p>
+          <p className=" h-max font-instagram lg:text-xl">{desc}</p>
         </div>
       </motion.div>
     </div>

@@ -97,7 +97,7 @@ const Event = () => {
             initial={{
               opacity: 0,
 
-              x: -350,
+              x: -50,
             }}
             whileInView={{
               opacity: 1,
@@ -119,7 +119,7 @@ const Event = () => {
             initial={{
               opacity: 0,
 
-              x: -350,
+              x: -50,
             }}
             whileInView={{
               opacity: 1,
@@ -141,7 +141,7 @@ const Event = () => {
             initial={{
               opacity: 0,
 
-              x: -350,
+              x: -50,
             }}
             whileInView={{
               opacity: 1,
@@ -163,7 +163,7 @@ const Event = () => {
             initial={{
               opacity: 0,
 
-              x: -350,
+              x: -50,
             }}
             whileInView={{
               opacity: 1,
@@ -195,19 +195,20 @@ const Event = () => {
               alt="Events"
               style={{
                 filter: !EventImageVisibility
-                  ? "brightness(100%)"
-                  : "brightness(50%)",
+                  ? "brightness(60%)"
+                  : "brightness(60%)",
               }}
             />
+            S
           </div>
-          {EventImageVisibility && (
-            <div
-              id="EventContainer1"
-              className={`text-white  absolute ml-[10%] lg:mt-[10%] lg:p-0 p-8`}
-            >
-              <EventDescCard title={events.title} text={events.text} />
-            </div>
-          )}
+          {/* {EventImageVisibility && ( */}
+          <div
+            id="EventContainer1"
+            className={`text-white  absolute ml-[10%] lg:mt-[10%] lg:p-0 p-8`}
+          >
+            <EventDescCard title={events.title} text={events.text} />
+          </div>
+          {/* )} */}
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from "react";
 import PSCard from "./PSCard";
 import PSData from "./PSData";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const PS = () => {
   return (
@@ -26,12 +27,14 @@ const PS = () => {
       </motion.div>
       <div className="flex lg:flex-row  lg:flex-wrap flex-col justify-evenly items-center">
         {PSData.map((item) => (
-          <PSCard
-            key={item.id}
-            img={item.img}
-            title={item.title}
-            desc="Coming Soon ..."
-          />
+          <Link to={item.link} target="__blank">
+            <PSCard
+              key={item.id}
+              img={item.img}
+              title={item.title}
+              desc={item.desc}
+            />
+          </Link>
         ))}
       </div>
       {/* <div className="font-array text-center text-4xl text-white">
