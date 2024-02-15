@@ -113,7 +113,12 @@ const Hero = () => {
             transition={{ duration: 0.4, delay: 0.6 }}
             className=" absolute sm:bottom-[-20%] bottom-[-20%] sm:right-[18%] transform translate-x-1/2 w-32 right-[30%]"
           >
-            <Link to="https://unstop.com/p/gamecodex-10-lnm-institute-of-information-technology-lnmiit-jaipur-892560" target="_blank"><img src={register} alt="" className="cursor-pointer" /></Link>{" "}
+            <Link
+              to="https://unstop.com/p/gamecodex-10-lnm-institute-of-information-technology-lnmiit-jaipur-892560"
+              target="_blank"
+            >
+              <img src={register} alt="" className="cursor-pointer" />
+            </Link>{" "}
           </motion.div>
         </motion.div>
       </div>
