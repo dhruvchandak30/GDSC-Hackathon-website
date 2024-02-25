@@ -22,7 +22,7 @@ const GameJamData = [
   },
   {
     title: "Getting Started",
-    Desc: "Join our exciting game jam adventure by registering on our website! Whether you're flying solo or teaming up with up to 5 fellow developers, there's a place for you. Once the theme is unveiled, unleash your imagination during a lively brainstorming session. With a generous week-long timeframe, dive into game development, embracing the spirit of exploration and experimentation. Remember, perfection isn't the goal – it's about the journey! When your masterpiece is ready, submit it on the Google Form before the clock runs out. For comprehensive rules, submission guidelines, and supported platforms, reach out to our friendly organizers. Let's embark on this creative journey together and craft unforgettable gaming experiences!",
+    Desc: "Join our exciting game jam adventure by registering on our website! Whether you're flying solo or teaming up with up to 5 fellow developers, there's a place for you. Once the theme is unveiled, unleash your imagination during a lively brainstorming session. With a generous week-long timeframe, dive into game development, embracing the spirit of exploration and experimentation. Remember, perfection isn't the goal – it's about the journey! When your masterpiece is ready, submit it on the Itch GameJam Page before the clock runs out. For comprehensive rules, submission guidelines, and supported platforms, reach out to our friendly organizers. Let's embark on this creative journey together and craft unforgettable gaming experiences!",
   },
 ];
 
