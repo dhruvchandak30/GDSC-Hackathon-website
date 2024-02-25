@@ -13,10 +13,11 @@ const Faq = () => {
     false,
     false,
     false,
+    false
   ]);
 
   const handleFaq = (e) => {
-    const temp = [false, false, false, false, false, false];
+    const temp = [false, false, false, false, false, false, false];
     if (toggleFaq[e] !== true) temp[e] = true;
     setToggleFaq(temp);
   };

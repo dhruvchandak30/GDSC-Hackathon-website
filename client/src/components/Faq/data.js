@@ -23,4 +23,8 @@ export const data=[
         question:"What will the participation cost for the hackathon?",
         answer:"Nothing. Just your dedication and creativity is all that you need to participate in the hackathon."
     },
+    {
+        question:"How do I submit a solution to the problem statement?",
+        answer:"The participants are required to provide the GitHub repository containing their solution along with a hosted link. Additionally, all participants must create a YouTube video explaining the problem statement and their solution. The video should be hosted on a private YouTube account, and the link must be submitted through the designated Google form provided."
+    },
 ]
