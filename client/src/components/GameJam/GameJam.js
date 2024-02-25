@@ -8,6 +8,23 @@ import "../GameCodex/GameCodex.css";
 import { useState, useEffect } from "react";
 import HamburgerNavbar from "../Navbar/HamburgerNavbar";
 import { Link } from "react-router-dom";
+import "./GameJam.css";
+import GameJamCard from "./GameJamCard";
+
+const GameJamData = [
+  {
+    title: "Theme: Game within a Game",
+    Desc: "Get ready to level up your creativity with our game jam theme: 'Game within a game'! Imagine your game character stepping into another game within your game! Picture a racing game where you collect puzzle pieces to unlock a hidden treasure hunt within.Unleash your imagination, challenge conventions, and redefine the gaming experience. Surprise us with the ultimate gameception. We can't wait to see what you come up with!",
+  },
+  {
+    title: "What is a Game Jam?",
+    Desc: "A game jam is an event where individuals or teams come together to create a game within a set timeframe, usually ranging from a few hours to a few days. It's a celebration of game development, fostering innovation, experimentation, and camaraderie among participants. Game jams are not only an excellent opportunity to sharpen your skills and expand your portfolio but also a chance to connect with like-minded individuals in the gaming community",
+  },
+  {
+    title: "Getting Started",
+    Desc: "Join our exciting game jam adventure by registering on our website! Whether you're flying solo or teaming up with up to 5 fellow developers, there's a place for you. Once the theme is unveiled, unleash your imagination during a lively brainstorming session. With a generous week-long timeframe, dive into game development, embracing the spirit of exploration and experimentation. Remember, perfection isn't the goal – it's about the journey! When your masterpiece is ready, submit it on the Google Form before the clock runs out. For comprehensive rules, submission guidelines, and supported platforms, reach out to our friendly organizers. Let's embark on this creative journey together and craft unforgettable gaming experiences!",
+  },
+];
 
 const GameJam = () => {
   const [wid, setWid] = useState(window.innerWidth);
@@ -34,7 +51,7 @@ const GameJam = () => {
               </h1>
             </div>
             <div className="flex lg:justify-end justify-center my-14">
-              <Link to="https://unstop.com/p/gamecodex-10-lnm-institute-of-information-technology-lnmiit-jaipur-892560">
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSfupxa-3jUAT9SHpTWh2HErhehp2YNs10jzrRK-JQTEL9Ckmg/viewform?vc=0&c=0&w=1&flr=0 ">
                 <button className="font-array text-xl bg-black text-pink-600 border-b-4 border-r-4 py-2 px-12 border-pink-600 ">
                   Register
                 </button>
@@ -43,49 +60,12 @@ const GameJam = () => {
           </div>
         </div>
       </div>
-      <div className="flex  bg-black pt-16  items-center relative flex-col ">
-        <div className="flex lg:mr-[45rem] lg:top-10 lg:absolute sm:text-center">
-          <h1 className="text-white font-array font-array  lg:text-5xl text-3xl mb-4">
-            Rules and Regulations
-          </h1>
-        </div>
-        <div>
-          <img
-            src={GameCodexRect}
-            alt=""
-            className="w-full lg:h-full h-[7rem]"
-          ></img>
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 100,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                duration: 1, // Animation duration
-              },
-            }}
-            viewport={{ once: true }}
-            className="absolute text-white lg:bottom-[2rem] lg:left-[25%] left-16 lg:w-1/2 md:w-2/3   text-center flex lg:justify-center lg:items-center top-32 lg:text-[35px] text-[25px] py-2 lg:px-8 px-12 font-instagram"
-          >
-            {/* Get ready to level up your creativity with our game jam theme: 'Game
-            within a game'! Ever wanted to dive into a virtual world where every
-            move unfolds a new game within the game? Picture yourself navigating
-            a maze while solving Sudoku puzzles, or battling dragons in a game
-            of chess. But wait, there's more! Imagine your game character
-            stepping into another game within your game! How about a racing game
-            where you collect puzzle pieces to unlock a hidden treasure hunt
-            within? The possibilities are endless! This theme invites you to
-            explore uncharted territories, challenge conventions, and redefine
-            the gaming experience. Let your imagination run wild and surprise us
-            with the ultimate gameception. We can't wait to see what you come up
-            with! */}
-            Coming Soon...
-          </motion.div>
-        </div>
+      <div>
+        <GameJamCard title={GameJamData[0].title} Desc={GameJamData[0].Desc} />
+        <GameJamCard title={GameJamData[1].title} Desc={GameJamData[1].Desc} />
+        <GameJamCard title={GameJamData[2].title} Desc={GameJamData[2].Desc} />
       </div>
+
       <div className="bg-black">
         <Footer />
       </div>
